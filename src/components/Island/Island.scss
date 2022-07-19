@@ -10,17 +10,40 @@ model-viewer {
 }
 
 .Hotspot {
-  background: #fff;
+  // background: #fff;
+  position: relative;
+  // background-image: url('../../../public/images/ball.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
   border-radius: 32px;
   border: 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
   box-sizing: border-box;
   cursor: pointer;
-  height: 8px;
-  padding: 8px;
-  position: relative;
-  // transition: all 0.2s linear;
-  width: 8px;
+  height: 24px;
+  width: 24px;
+  padding: 0;
+
+  &.story{
+    background-image: url('../../../public/images/story-ball.png');
+  }
+
+  &.gameplay{
+    background-image: url('../../../public/images/gameplay-ball.png');
+  }
+
+  &.about{
+    background-image: url('../../../public/images/about-ball.png');
+  }
+
+  &.roadmap{
+    background-image: url('../../../public/images/roadmap-ball.png');
+  }
+
+  &.tokenomic{
+    background-image: url('../../../public/images/tokenomic-ball.png');
+  }
 }
 
 .Hotspot:not([data-visible]) {
@@ -165,6 +188,55 @@ model-viewer > #ar-prompt > img {
   }
 }
 
+.nav-mobile{
+  position: absolute;
+  top: 10%;
+  left: -100%;
+  transition: all 0.3s ease-in-out;
+
+  &.active{
+    left: 10%;
+  }
+
+  &-item{
+    display: flex;
+    padding: 2px 4px;
+    margin-top: 4px;
+    font-size: 14px;
+    border-radius: 10px;
+    font-weight: 500;
+
+    &.story{
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    &.gameplay{
+      background-color: #f9dd0742;
+      color: #983D11;
+    }
+
+    &.roadmap{
+      background-color: #cce7ff73;
+      color: #5992B3;
+    }
+
+    &.about{
+      background-color: #beaefd73;
+      color: #AF7FE7;
+    }
+
+    &.tokenomic{
+      background-color: #95CAF1;
+      color: #426385;
+    }
+
+    &-icon{
+      height: 18px;
+      margin-right: 4px;
+    }
+  }
+}
+
 
 /* Mobile Only */
 @media (max-width: 739px) {
@@ -173,6 +245,10 @@ model-viewer > #ar-prompt > img {
 
     .btn-back{
       bottom: 19%;
+    }
+
+    .HotspotAnnotation{
+      display: none;
     }
   }
 }

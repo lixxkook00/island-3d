@@ -7,10 +7,14 @@ export default function Island() {
     const [status,setStatus] = useState("")
     const [name,setName] = useState("")
 
+    const [statusNavMobile,setStatusNavMobile] = useState("active")
+
     const model = useRef(null);
+    const navMobile = useRef(null);
 
     const handleShowModal = (nameDataset) => {
         setName(nameDataset)
+        setStatusNavMobile(" ")
         setTimeout(() => {
             setStatus("active")
         },500)
@@ -76,12 +80,19 @@ export default function Island() {
             };
         });
 
+        navMobile.current.querySelectorAll('.nav-mobile-item').forEach((hotspot) => {
+            hotspot.onclick = () => {
+                annotationClicked(hotspot)
+            };
+        });
+
         const handleBack = () => {
             modelViewer1.cameraTarget = "0 0 0";
             modelViewer1.cameraOrbit = "0 0 0";
             modelViewer1.fieldOfView = '45deg';
 
             setStatus("")
+            setStatusNavMobile("active")
         }
 
         const btnBack = document.querySelector(".btn-back");
@@ -112,7 +123,7 @@ export default function Island() {
                 loading="eager"
             >
                 <button 
-                    className="Hotspot" 
+                    className="Hotspot story" 
                     slot="hotspot-1" 
                     data-name="story"
                     data-position="-15.17371364484508m 13.733440214997351m -0.38319811637248513m" 
@@ -126,7 +137,7 @@ export default function Island() {
                 </button>
 
                 <button 
-                    className="Hotspot" 
+                    className="Hotspot gameplay" 
                     slot="hotspot-3"
                     data-name="gameplay" 
                     data-position="0.8963960088420251m 2.1090111828714697m -10.67504054997515m" 
@@ -140,7 +151,7 @@ export default function Island() {
                 </button>
 
                 <button 
-                    className="Hotspot" 
+                    className="Hotspot roadmap" 
                     slot="hotspot-4" 
                     data-name="roadmap" 
                     data-position="10.691738579399255m 8.596935581875726m -19.161179077009717m" 
@@ -154,7 +165,7 @@ export default function Island() {
                 </button>
 
                 <button 
-                    className="Hotspot" 
+                    className="Hotspot tokenomic" 
                     slot="hotspot-5" 
                     data-name="tokenomic" 
                     data-position="15.6116381187966m 6.402890192149521m 7.410681504706385m" 
@@ -168,7 +179,7 @@ export default function Island() {
                 </button>
 
                 <button 
-                    className="Hotspot" 
+                    className="Hotspot about" 
                     slot="hotspot-6" 
                     data-name="about"
                     data-position="17.639094300976467m 6.981488777235602m -4.673789700264038m" 
@@ -192,6 +203,75 @@ export default function Island() {
             </model-viewer>
 
             <ContentModal status={status} name={name}/>
+
+            <div className={`nav-mobile ${statusNavMobile} hide-on-pc`} ref={navMobile}>
+                <div 
+                    className="nav-mobile-item story" 
+                    data-target="-15m -7m -80m"
+                    data-name="story"
+                >
+                    <div className="nav-mobile-item-icon">
+                        <img src="./images/story-ball.png" alt="" />
+                    </div>
+                    <div className="nav-mobile-item-title">
+                        Story
+                    </div>
+                </div>
+
+                <div 
+                    className="nav-mobile-item gameplay" 
+                    data-target="0.00m -22.00m -100.00m"
+                    data-name="gameplay"
+                >
+                    <div className="nav-mobile-item-icon">
+                        <img src="./images/gameplay-ball.png" alt="" />
+                    </div>
+                    <div className="nav-mobile-item-title">
+                        Game Play
+                    </div>
+                </div>
+
+                <div 
+                    className="nav-mobile-item roadmap" 
+                    data-target="9m -11m -95m"
+                    data-name="roadmap"
+                >
+                    <div className="nav-mobile-item-icon">
+                        <img src="./images/roadmap-ball.png" alt="" />
+                    </div>
+                    <div className="nav-mobile-item-title">
+                        Road Map
+                    </div>
+                </div>
+
+                <div 
+                    className="nav-mobile-item about" 
+                    data-target="16m -16m -93m"
+                    data-name="about"    
+                    >
+                    <div className="nav-mobile-item-icon">
+                        <img src="./images/about-ball.png" alt="" />
+                    </div>
+                    <div className="nav-mobile-item-title">
+                        About
+                    </div>
+                </div>
+                
+                <div 
+                    className="nav-mobile-item tokenomic" 
+                    data-target="15m -18m -84m"
+                    data-name="tokenomic"
+                >
+                    <div className="nav-mobile-item-icon">
+                        <img src="./images/tokenomic-ball.png" alt="" />
+                    </div>
+                    <div className="nav-mobile-item-title">
+                        Tokenomic
+                    </div>
+                </div>
+            </div>
+
+
         </div>
     )
 }
