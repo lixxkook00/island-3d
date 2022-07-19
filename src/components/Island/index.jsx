@@ -1,4 +1,4 @@
-import React , { useState } from 'react'
+import React , { useState , useEffect , useRef } from 'react'
 import './Island.scss'
 
 import ContentModal from '../../components/ContentModal'
@@ -7,6 +7,8 @@ export default function Island() {
     const [status,setStatus] = useState("")
     const [name,setName] = useState("")
 
+    const model = useRef(null);
+
     const handleShowModal = (nameDataset) => {
         setName(nameDataset)
         setTimeout(() => {
@@ -14,8 +16,9 @@ export default function Island() {
         },500)
     }
 
-    window.addEventListener('load', (event) => {
-        // handle on load
+    useEffect(() => {
+
+        // handle loading
         const onProgress = (event) => {
             const progressBar = event.target.querySelector('.progress-bar');
             const updatingBar = event.target.querySelector('.update-bar');
@@ -33,33 +36,46 @@ export default function Island() {
 
         document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
-        // handle onClick
-        const modelViewer1 = document.querySelector("#hotspot-camera-view-demo");
+        // handle onclick
+        const modelViewer1 =  model.current;
+        
         const annotationClicked = (annotation) => {
             let dataset = annotation.dataset;
             modelViewer1.cameraTarget = dataset.target;
             modelViewer1.cameraOrbit = dataset.orbit;
             modelViewer1.fieldOfView = '45deg';
 
+            console.log(dataset.target)
+
             handleShowModal(dataset.name)
         }
 
         modelViewer1.querySelectorAll('.Hotspot').forEach((hotspot) => {
-            hotspot.addEventListener('click', () => annotationClicked(hotspot));
+            hotspot.onclick = () => {
+                annotationClicked(hotspot)
+            };
         });
 
-        const btnBack = document.querySelector(".btn-back");
-        btnBack.onclick = () => {
+        const handleBack = () => {
             modelViewer1.cameraTarget = "0 0 0";
             modelViewer1.cameraOrbit = "0 0 0";
             modelViewer1.fieldOfView = '45deg';
+
+            console.log("back")
             setStatus("")
         }
-    })
+
+        const btnBack = document.querySelector(".btn-back");
+        btnBack.onclick = () => {
+            handleBack()
+        }
+
+    },[])
 
     return (
         <div className="island">
             <model-viewer 
+                ref={model}
                 id="hotspot-camera-view-demo"  
                 bounds="tight" 
                 enable-pan src='./images/island_2.glb'
@@ -148,7 +164,7 @@ export default function Island() {
                     <div className="update-bar"></div>
                 </div>
 
-                <button className="btn-back">
+                <button className="btn-back" >
                     <img src="./images/back.png" alt="" />
                 </button>
             
