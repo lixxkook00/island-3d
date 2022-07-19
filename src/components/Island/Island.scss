@@ -19,7 +19,7 @@ model-viewer {
   height: 8px;
   padding: 8px;
   position: relative;
-  transition: opacity 0.3s;
+  transition: all 0.2s linear;
   width: 8px;
 }
 
@@ -47,7 +47,7 @@ model-viewer {
 .HotspotAnnotation{
   border-radius: 4px;
   display: block;
-  transition: all 0.1s ease;
+  transition: all 0.1s linear;
   left: calc(100% + 1em);
   position: absolute;
   top: 50%;
@@ -73,7 +73,7 @@ model-viewer {
   transform: translate3d(-50%, -50%, 0);
   border-radius: 25px;
   box-shadow: 0px 3px 10px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px 1px rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.9);
+  border: 2px solid #015FA8;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -83,7 +83,7 @@ model-viewer {
 }
 
 .update-bar {
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #4be7ffba;
   width: 0%;
   height: 100%;
   border-radius: 25px;

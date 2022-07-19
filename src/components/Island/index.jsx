@@ -22,12 +22,22 @@ export default function Island() {
         const onProgress = (event) => {
             const progressBar = event.target.querySelector('.progress-bar');
             const updatingBar = event.target.querySelector('.update-bar');
+
             updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
+
             if (event.detail.totalProgress === 1) {
                 progressBar.classList.add('hide');
+                modelViewer1.querySelectorAll('button').forEach((hotspot) => {
+                    hotspot.style.opacity = 1;
+                });
             } 
             else {
                 progressBar.classList.remove('hide');
+
+                modelViewer1.querySelectorAll('button').forEach((hotspot) => {
+                    hotspot.style.opacity = 0;
+                });
+
                 if (event.detail.totalProgress === 0) {
                     event.target.querySelector('.center-pre-prompt').classList.add('hide');
                 }
@@ -89,6 +99,7 @@ export default function Island() {
                 camera-orbit="1.198deg 80.79deg auto" 
                 min-camera-orbit="auto auto 107.5m" 
                 min-field-of-view="30deg"
+                loading="eager"
             >
                 <button 
                     className="Hotspot" 
