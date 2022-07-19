@@ -164,3 +164,17 @@ model-viewer > #ar-prompt > img {
     transform: scale(0.95) translate(-50%);
   }
 }
+
+
+/* Mobile Only */
+@media (max-width: 739px) {
+  .island{
+    transform: scale(1.2);
+
+    .btn-back{
+      bottom: 10%;
+    }
+
+    
+  }
+}

@@ -2,7 +2,7 @@
     position: absolute;
     left: -100%;
     top: 10%;
-    background-color: #4BE6FF;
+    background-color: #4be7ffba;
     padding: 5px 0px;
     border-radius: 10px;
     border: 2px solid #015FA8;
@@ -27,4 +27,19 @@
         padding: 0 10px;
         text-align: justify;
     }
+}
+
+
+/* Mobile Only */
+@media (max-width: 739px) {
+
+    .content-modal{
+        width: 300px;
+        
+        &.active{
+            left: 50%;
+            transform: translateX(-50%)
+        }
+    }
+
 }

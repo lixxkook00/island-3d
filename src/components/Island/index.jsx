@@ -12,7 +12,6 @@ export default function Island() {
         setTimeout(() => {
             setStatus("active")
         },500)
-
     }
 
     window.addEventListener('load', (event) => {
