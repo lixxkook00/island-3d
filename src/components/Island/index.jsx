@@ -11,7 +11,7 @@ export default function Island() {
         setName(nameDataset)
         setTimeout(() => {
             setStatus("active")
-        },1000)
+        },500)
 
     }
 
