@@ -19,7 +19,7 @@ model-viewer {
   height: 8px;
   padding: 8px;
   position: relative;
-  transition: all 0.2s linear;
+  // transition: all 0.2s linear;
   width: 8px;
 }
 
@@ -47,7 +47,7 @@ model-viewer {
 .HotspotAnnotation{
   border-radius: 4px;
   display: block;
-  transition: all 0.1s linear;
+  // transition: all 0.1s linear;
   left: calc(100% + 1em);
   position: absolute;
   top: 50%;

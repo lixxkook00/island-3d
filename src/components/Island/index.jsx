@@ -46,16 +46,26 @@ export default function Island() {
 
         document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
-        // handle onclick
+        // CLICK
         const modelViewer1 =  model.current;
+
+        // init camera animation
+        modelViewer1.cameraTarget = "0 0 0";
+
+        setTimeout(() => {
+            modelViewer1.cameraTarget = "0.00m -5.00m -100.00m";
+        },500)
+
+        setTimeout(() => {
+            modelViewer1.cameraTarget = "0 0 0";
+        },2000)
         
+        // handle onclick
         const annotationClicked = (annotation) => {
             let dataset = annotation.dataset;
             modelViewer1.cameraTarget = dataset.target;
             modelViewer1.cameraOrbit = dataset.orbit;
             modelViewer1.fieldOfView = '45deg';
-
-            console.log(dataset.target)
 
             handleShowModal(dataset.name)
         }
@@ -70,8 +80,7 @@ export default function Island() {
             modelViewer1.cameraTarget = "0 0 0";
             modelViewer1.cameraOrbit = "0 0 0";
             modelViewer1.fieldOfView = '45deg';
-
-            console.log("back")
+            
             setStatus("")
         }
 
@@ -90,7 +99,8 @@ export default function Island() {
                 bounds="tight" 
                 enable-pan src='./images/island_2.glb'
                 ar ar-modes="webxr scene-viewer quick-look"
-                camera-controls 
+                camera-controls
+                cameraTarget = "0 0 0"
                 touch-action="none"
                 interpolation-decay="200"
                 shadow-intensity="0" 
