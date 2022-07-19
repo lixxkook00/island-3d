@@ -50,15 +50,15 @@ export default function Island() {
         const modelViewer1 =  model.current;
 
         // init camera animation
-        modelViewer1.cameraTarget = "0 0 0";
+        // modelViewer1.cameraTarget = "0 0 0";
 
-        setTimeout(() => {
-            modelViewer1.cameraTarget = "0.00m -5.00m -100.00m";
-        },500)
+        // setTimeout(() => {
+        //     modelViewer1.cameraTarget = "0.00m -5.00m -100.00m";
+        // },500)
 
-        setTimeout(() => {
-            modelViewer1.cameraTarget = "0 0 0";
-        },2000)
+        // setTimeout(() => {
+        //     modelViewer1.cameraTarget = "0 0 0";
+        // },2000)
         
         // handle onclick
         const annotationClicked = (annotation) => {
@@ -80,7 +80,7 @@ export default function Island() {
             modelViewer1.cameraTarget = "0 0 0";
             modelViewer1.cameraOrbit = "0 0 0";
             modelViewer1.fieldOfView = '45deg';
-            
+
             setStatus("")
         }
 
