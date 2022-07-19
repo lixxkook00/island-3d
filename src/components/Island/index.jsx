@@ -201,7 +201,6 @@ export default function Island() {
                 </button>
             
             </model-viewer>
-
             <ContentModal status={status} name={name}/>
 
             <div className={`nav-mobile ${statusNavMobile} hide-on-pc`} ref={navMobile}>
