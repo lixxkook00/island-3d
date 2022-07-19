@@ -1,7 +1,19 @@
-import React from 'react'
+import React , { useState } from 'react'
 import './Island.scss'
 
+import ContentModal from '../../components/ContentModal'
+
 export default function Island() {
+    const [status,setStatus] = useState("")
+    const [name,setName] = useState("")
+
+    const handleShowModal = (nameDataset) => {
+        setName(nameDataset)
+        setTimeout(() => {
+            setStatus("active")
+        },1000)
+
+    }
 
     window.addEventListener('load', (event) => {
         // handle on load
@@ -10,12 +22,13 @@ export default function Island() {
             const updatingBar = event.target.querySelector('.update-bar');
             updatingBar.style.width = `${event.detail.totalProgress * 100}%`;
             if (event.detail.totalProgress === 1) {
-            progressBar.classList.add('hide');
-            } else {
-            progressBar.classList.remove('hide');
-            if (event.detail.totalProgress === 0) {
-                event.target.querySelector('.center-pre-prompt').classList.add('hide');
-            }
+                progressBar.classList.add('hide');
+            } 
+            else {
+                progressBar.classList.remove('hide');
+                if (event.detail.totalProgress === 0) {
+                    event.target.querySelector('.center-pre-prompt').classList.add('hide');
+                }
             }
         };
 
@@ -28,15 +41,20 @@ export default function Island() {
             modelViewer1.cameraTarget = dataset.target;
             modelViewer1.cameraOrbit = dataset.orbit;
             modelViewer1.fieldOfView = '45deg';
+
+            handleShowModal(dataset.name)
         }
 
-        modelViewer1.querySelectorAll('button').forEach((hotspot) => {
+        modelViewer1.querySelectorAll('.Hotspot').forEach((hotspot) => {
             hotspot.addEventListener('click', () => annotationClicked(hotspot));
         });
 
         const btnBack = document.querySelector(".btn-back");
         btnBack.onclick = () => {
             modelViewer1.cameraTarget = "0 0 0";
+            modelViewer1.cameraOrbit = "0 0 0";
+            modelViewer1.fieldOfView = '45deg';
+            setStatus("")
         }
     })
 
@@ -60,56 +78,71 @@ export default function Island() {
                 <button 
                     className="Hotspot" 
                     slot="hotspot-1" 
+                    data-name="story"
                     data-position="-15.17371364484508m 13.733440214997351m -0.38319811637248513m" 
                     data-normal="-0.02078116632344306m -0.1802298925512806m 0.9834049669170842m" 
                     data-visibility-attribute="visible"
                     data-target="-15m -7m -80m"
                     >
-                    <div className="HotspotAnnotation">Story</div>
+                    <div className="HotspotAnnotation">
+                        <img src="./images/story.png" alt="" />
+                    </div>
                 </button>
 
                 <button 
                     className="Hotspot" 
-                    slot="hotspot-3" 
+                    slot="hotspot-3"
+                    data-name="gameplay" 
                     data-position="0.8963960088420251m 2.1090111828714697m -10.67504054997515m" 
                     data-normal="0m -1.343588610839583e-7m 0.9999999999999911m" 
                     data-visibility-attribute="visible"
                     data-target="0.00m -22.00m -100.00m"
                     >
-                    <div className="HotspotAnnotation">Game Play</div>
+                    <div className="HotspotAnnotation">
+                        <img src="./images/gameplay.png" alt="" />
+                    </div>
                 </button>
 
                 <button 
                     className="Hotspot" 
                     slot="hotspot-4" 
+                    data-name="roadmap" 
                     data-position="10.691738579399255m 8.596935581875726m -19.161179077009717m" 
                     data-normal="0.084068692003698m -0.6899835441859172m 0.718926396634195m" 
                     data-visibility-attribute="visible"
                     data-target="9m -11m -95m"
                     >
-                    <div className="HotspotAnnotation">Road Map</div>
+                    <div className="HotspotAnnotation">
+                        <img src="./images/roadmap.png" alt="" />
+                    </div>
                 </button>
 
                 <button 
                     className="Hotspot" 
                     slot="hotspot-5" 
+                    data-name="tokenomic" 
                     data-position="15.6116381187966m 6.402890192149521m 7.410681504706385m" 
                     data-normal="-0.06744800715356736m 0.9403464876600586m 0.3334655146734123m" 
                     data-visibility-attribute="visible"
                     data-target="15m -18m -84m"
-                    >
-                    <div className="HotspotAnnotation">Tokennomic</div>
+                >
+                    <div className="HotspotAnnotation">
+                        <img src="./images/tokenomic.png" alt="" />
+                    </div>
                 </button>
 
                 <button 
                     className="Hotspot" 
                     slot="hotspot-6" 
+                    data-name="about"
                     data-position="17.639094300976467m 6.981488777235602m -4.673789700264038m" 
                     data-normal="0.11157101174070311m 0.9887687838192699m 0.09943943626005725m" 
                     data-visibility-attribute="visible"
                     data-target="16m -16m -93m"
-                    >
-                    <div className="HotspotAnnotation">About</div>
+                >
+                    <div className="HotspotAnnotation">
+                        <img src="./images/about.png" alt="" />
+                    </div>
                 </button>
 
                 <div className="progress-bar hide" slot="progress-bar">
@@ -117,10 +150,12 @@ export default function Island() {
                 </div>
 
                 <button className="btn-back">
-                    Back
+                    <img src="./images/back.png" alt="" />
                 </button>
             
             </model-viewer>
+
+            <ContentModal status={status} name={name}/>
         </div>
     )
 }

@@ -45,21 +45,13 @@ model-viewer {
 }
 
 .HotspotAnnotation{
-  background: rgba(255, 255, 255, 0.259);
   border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  color: rgba(0, 0, 0, 0.8);
   display: block;
-  font-family: Futura, Helvetica Neue, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
+  transition: all 0.1s ease;
   left: calc(100% + 1em);
-  max-width: 128px;
-  overflow-wrap: break-word;
-  padding: 4px;
   position: absolute;
   top: 50%;
-  width: max-content;
+  height: 30px;
 }
 
 .Hotspot:not([data-visible]) > * {
@@ -160,11 +152,15 @@ model-viewer > #ar-prompt > img {
 .btn-back{
   position: absolute;
   left: 50%;
-  bottom: 10%;
-  border: none;
-  background-color: #fff;
-  padding: 10px 20px;
+  bottom: 5%;
+  height: 40px;
   border-radius: 10px;
-  font-weight: 600;
   transform: translate(-50%);
+  transition: all 0.3s ease;
+  outline: none;
+
+  &:hover{
+    cursor: pointer;
+    transform: scale(0.95) translate(-50%);
+  }
 }

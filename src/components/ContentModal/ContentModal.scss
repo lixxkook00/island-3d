@@ -1,0 +1,30 @@
+.content-modal{
+    position: absolute;
+    left: -100%;
+    top: 10%;
+    background-color: #4BE6FF;
+    padding: 5px 0px;
+    border-radius: 10px;
+    border: 2px solid #015FA8;
+    max-width: 400px;
+    transition: all 0.5s ease-in-out;
+
+    &.active{
+        left: 2%;
+    }
+
+    &-title{
+        font-weight: 700;
+        color: #0A0963;
+        text-transform: uppercase;
+        border-bottom: 1px solid #015FA8;
+        padding: 0 10px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    &-main{
+        padding: 0 10px;
+        text-align: justify;
+    }
+}

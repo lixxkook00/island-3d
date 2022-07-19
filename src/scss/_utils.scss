@@ -1,0 +1,62 @@
+@import './variables';
+@import './animations';
+
+// clear default element
+input{
+  outline:none;
+  border:none;
+}
+
+.text-overflow{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ul{
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+li{
+    list-style: none;
+}
+
+img{
+    height: 100%;
+    width: auto;
+}
+
+select:hover{
+  cursor: pointer;
+}
+
+select:focus-visible,
+input:focus-visible {
+    outline: none;
+}
+
+button{
+  border: none;
+  background-color: unset;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+a{
+  display: inline-block;
+  color: unset;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: none;
+    color: unset;
+  }
+}
+
+a:not([href]):not([tabindex]){
+  color: #fff;
+}
+
