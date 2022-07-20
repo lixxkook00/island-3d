@@ -32,14 +32,14 @@ export default function Island() {
 
             if (event.detail.totalProgress === 1) {
                 progressBar.classList.add('hide');
-                modelViewer1.querySelectorAll('button').forEach((hotspot) => {
+                modelViewer.querySelectorAll('button').forEach((hotspot) => {
                     hotspot.style.opacity = 1;
                 });
             } 
             else {
                 progressBar.classList.remove('hide');
 
-                modelViewer1.querySelectorAll('button').forEach((hotspot) => {
+                modelViewer.querySelectorAll('button').forEach((hotspot) => {
                     hotspot.style.opacity = 0;
                 });
 
@@ -51,31 +51,35 @@ export default function Island() {
 
         document.querySelector('model-viewer').addEventListener('progress', onProgress);
 
-        // CLICK
-        const modelViewer1 =  model.current;
+        const modelViewer =  model.current;
 
         // init camera animation
-        // modelViewer1.cameraTarget = "0 0 0";
+        const orbitCycle = [
+            '-180deg -180deg 100%',
+            modelViewer.cameraOrbit
+        ];
 
-        // setTimeout(() => {
-        //     modelViewer1.cameraTarget = "0.00m -5.00m -100.00m";
-        // },500)
+        const animationCamera = setInterval(() => {
+            const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+            modelViewer.cameraOrbit =
+                orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
 
-        // setTimeout(() => {
-        //     modelViewer1.cameraTarget = "0 0 0";
-        // },2000)
+            if(currentOrbitIndex===0){
+                clearInterval(animationCamera);
+            }
+        }, 1500);
         
         // handle onclick
         const annotationClicked = (annotation) => {
             let dataset = annotation.dataset;
-            modelViewer1.cameraTarget = dataset.target;
-            modelViewer1.cameraOrbit = dataset.orbit;
-            modelViewer1.fieldOfView = '45deg';
+            modelViewer.cameraTarget = dataset.target;
+            modelViewer.cameraOrbit = dataset.orbit;
+            modelViewer.fieldOfView = '45deg';
 
             handleShowModal(dataset.name)
         }
 
-        modelViewer1.querySelectorAll('.Hotspot').forEach((hotspot) => {
+        modelViewer.querySelectorAll('.Hotspot').forEach((hotspot) => {
             hotspot.onclick = () => {
                 annotationClicked(hotspot)
             };
@@ -89,9 +93,9 @@ export default function Island() {
         });
 
         const handleBack = () => {
-            modelViewer1.cameraTarget = "0 0 0";
-            modelViewer1.cameraOrbit = "0 0 0";
-            modelViewer1.fieldOfView = '45deg';
+            modelViewer.cameraTarget = "0 0 0";
+            modelViewer.cameraOrbit = "0 0 0";
+            modelViewer.fieldOfView = '45deg';
 
             setStatus("")
             setStatusNavMobile("active")
@@ -124,6 +128,7 @@ export default function Island() {
                 min-camera-orbit="auto auto 100m" 
                 min-field-of-view="30deg"
                 loading="eager"
+                // auto-rotate="true"
             >
                 <button 
                     className="Hotspot story" 
@@ -202,7 +207,6 @@ export default function Island() {
                 <button className="btn-back" >
                     <img src="./images/back.png" alt="" />
                 </button>
-            
             </model-viewer>
             
             <ContentModal status={status} name={name}/>
