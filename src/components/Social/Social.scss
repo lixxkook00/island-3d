@@ -1,0 +1,58 @@
+.social{
+    position:absolute;
+    bottom: 10%;
+    right: -100%;
+    transition: all 0.8s linear;
+
+    &.active{
+        right: 2%;
+    }
+
+    &-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-item{
+        height: 40px;
+        width: 40px;
+        background-image: linear-gradient(135deg, #b2a58e 21%, #7c7366 73%);
+        margin-bottom: 8px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #002c65;
+        transition: all 0.5s linear;
+
+        i{ 
+            color: #7cc818;
+        }
+
+        &:hover{
+            cursor: pointer;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+/* Mobile Only */
+@media (max-width: 739px) {
+  .social{
+    bottom: 18%;
+
+    &.active{
+        right: 10%;
+    }
+
+    &-item{
+        height: 28px;
+        width: 28px;
+
+        i{
+            font-size: 12px;
+        }
+    }
+
+  }
+}
