@@ -171,7 +171,7 @@ export default function Island() {
                         <img src="./images/roadmap.png" alt="" />
                     </div>
                 </button>
-
+                                    
                 <button 
                     className="Hotspot tokenomic" 
                     slot="hotspot-5" 
