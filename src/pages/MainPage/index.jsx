@@ -13,7 +13,6 @@ export default function MainPage() {
 
       <Island />
 
-      
     </div>
   )
 }
