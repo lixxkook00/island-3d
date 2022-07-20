@@ -115,12 +115,13 @@ export default function Island() {
                 camera-controls
                 cameraTarget = "0 0 0"
                 touch-action="none"
+                interaction-prompt="none"
                 interpolation-decay="200"
                 shadow-intensity="0" 
                 exposure="0.45" 
                 shadow-softness="1" 
                 camera-orbit="1.198deg 80.79deg auto" 
-                min-camera-orbit="auto auto 107.5m" 
+                min-camera-orbit="auto auto 100m" 
                 min-field-of-view="30deg"
                 loading="eager"
             >
