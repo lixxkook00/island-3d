@@ -44,7 +44,7 @@ export default function NavMobile({statusNavMobile,navMobile}) {
 
         <div 
             className="nav-mobile-item about" 
-            data-target="16m -16m -93m"
+            data-target="-12m -12m -75m" 
             data-name="about"    
             >
             <div className="nav-mobile-item-icon">
