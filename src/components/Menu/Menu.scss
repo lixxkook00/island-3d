@@ -1,0 +1,85 @@
+@import url('../../scss/_animations.scss');
+
+.menu{
+    position: absolute;
+    right: -143px;
+    top: 20%;
+    display: flex;
+    transition: all 0.3s linear;
+
+    &.active{
+        right: 0;
+    }
+
+    &-btn{
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid #002c65;
+        border-top-left-radius: 12px;
+        border-bottom-left-radius: 12px;
+        background-image: linear-gradient(135deg, #b2a58e 21%, #7c7366 73%);
+
+        &:hover{
+            cursor: pointer;
+        }
+        
+        i{
+            color: #7cc818;
+            transition: all 0.3s linear;
+            animation: rotate 2s linear infinite;
+        }
+    }
+
+    &-content{
+        background-color: #fff;
+        border-bottom-left-radius: 12px;
+    
+        &-item{
+            display: flex;
+            padding: 8px;
+            align-items: center;
+        }
+        
+        &-icon{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #ddd;
+            margin-right: 8px;
+            transition: all 0.5s ease;
+            
+
+            i{
+                color: gray;
+            }
+
+            &:hover{
+                border: 2px solid #002c65;
+            }
+
+            &.active{
+                background-image: linear-gradient(135deg, #b2a58e 21%, #7c7366 73%);
+                border: 2px solid #002c65;
+
+                i{
+                    color: #7cc818;
+                }
+            }
+
+            &:hover{
+                cursor: pointer;
+
+            }
+        }
+
+        &-title{
+            font-weight: 500;
+        }
+    }
+}

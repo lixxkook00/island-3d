@@ -5,10 +5,13 @@ import ContentModal from '../../components/ContentModal'
 import NavMobile from '../../components/NavMobile'
 import Social from '../../components/Social'
 import ModelViewer from '../../components/ModelViewer'
+import Menu from '../Menu'
 
 export default function Island() {
     const [status,setStatus] = useState("")
     const [name,setName] = useState("")
+
+    const [rotateStatusGlobal,setRotateStatusGlobal] = useState(false)
 
     const [statusNavMobile,setStatusNavMobile] = useState("active")
 
@@ -46,7 +49,7 @@ export default function Island() {
                 });
 
                 if (event.detail.totalProgress === 0) {
-                    event.target.querySelector('.center-pre-prompt').classList.add('hide');
+                    event.target.querySelector('.center-pre-prompt')?.classList.add('hide');
                 }
             }
         };
@@ -113,7 +116,7 @@ export default function Island() {
     return (
         <div className="island">
 
-            <ModelViewer model={model}/>
+            <ModelViewer model={model} rotateStatus={rotateStatusGlobal}/>
             
             <ContentModal status={status} name={name}/>
 
@@ -121,6 +124,7 @@ export default function Island() {
 
             <Social status={statusNavMobile}/>
 
+            <Menu setRotateStatusGlobal={setRotateStatusGlobal} rotateStatusGlobal={rotateStatusGlobal}/>
         </div>
     )
 }

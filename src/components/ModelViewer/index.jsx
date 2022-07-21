@@ -1,6 +1,13 @@
 import React from 'react'
 
-export default function ModelViewer({model}) {
+export default function ModelViewer({model,rotateStatus}) {
+
+    if(rotateStatus){
+        model?.current?.setAttribute('auto-rotate', '')
+    }else{
+        model?.current?.removeAttribute('auto-rotate')
+    }
+
   return (
     <model-viewer 
         ref={model}
@@ -20,10 +27,10 @@ export default function ModelViewer({model}) {
         min-camera-orbit="auto auto 100m" 
         min-field-of-view="30deg"
         loading="eager"
-        // auto-rotate="true"
+        
     >
         <button 
-            class="Hotspot gameplay" 
+            className="Hotspot gameplay" 
             slot="hotspot-3" 
             data-name="gameplay"
             data-target="0.00m -22.00m -93.00m" 
@@ -31,13 +38,13 @@ export default function ModelViewer({model}) {
             data-position="-0.13731682053599328m 0.8377597114419015m -5.373484045566966m" 
             data-visibility-attribute="visible"
         >
-            <div class="HotspotAnnotation">
+            <div className="HotspotAnnotation">
                 <img src="./images/gameplay.png" alt="" />
             </div>
         </button>
 
         <button 
-            class="Hotspot story" 
+            className="Hotspot story" 
             slot="hotspot-4"
             data-name="story"
             data-target="-15m -7m -80m" 
@@ -45,13 +52,13 @@ export default function ModelViewer({model}) {
             data-normal="-0.020781167034444877m 0.9834049911180218m 0.1802297604194435m" 
             data-visibility-attribute="visible"
         >
-            <div class="HotspotAnnotation">
+            <div className="HotspotAnnotation">
                 <img src="./images/story.png" alt="" />
             </div>
         </button>
         
         <button 
-            class="Hotspot about" 
+            className="Hotspot about" 
             slot="hotspot-5" 
             data-name="about"
             data-target="-12m -12m -75m" 
@@ -59,13 +66,13 @@ export default function ModelViewer({model}) {
             data-normal="0.37251586787697294m 0.6007353892742824m 0.7073534620353125m" 
             data-visibility-attribute="visible"
         >
-            <div class="HotspotAnnotation">
+            <div className="HotspotAnnotation">
                 <img src="./images/about.png" alt="" />
             </div>
         </button>
         
         <button 
-            class="Hotspot tokenomic" 
+            className="Hotspot tokenomic" 
             slot="hotspot-6"
             data-name="tokenomic" 
             data-target="15m -16m -80m" 
@@ -73,13 +80,13 @@ export default function ModelViewer({model}) {
             data-normal="-0.1855656316405426m 0.954699863574524m 0.2326232293745228m" 
             data-visibility-attribute="visible"
         >
-            <div class="HotspotAnnotation">
+            <div className="HotspotAnnotation">
                 <img src="./images/tokenomic.png" alt="" />
             </div>
         </button>
         
         <button 
-            class="Hotspot roadmap" 
+            className="Hotspot roadmap" 
             slot="hotspot-7"
             data-name="roadmap"  
             data-target="9m -11m -95m"
@@ -87,7 +94,7 @@ export default function ModelViewer({model}) {
             data-normal="0.28569650671472246m 0.9475348150863014m 0.14337112767350713m" 
             data-visibility-attribute="visible"
         >
-            <div class="HotspotAnnotation">
+            <div className="HotspotAnnotation">
                 <img src="./images/roadmap.png" alt="" />
             </div>
         </button>
