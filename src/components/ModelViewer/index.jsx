@@ -6,10 +6,10 @@ export default function ModelViewer({model}) {
         ref={model}
         id="hotspot-camera-view-demo"  
         bounds="tight" 
-        enable-pan src='./images/island_2.glb'
+        enable-pan src='./images/island7.gltf'
         ar ar-modes="webxr scene-viewer quick-look"
         camera-controls
-        cameraTarget = "0 0 0"
+        camera-target="0 0 0"
         touch-action="none"
         interaction-prompt="none"
         interpolation-decay="200"
@@ -23,72 +23,72 @@ export default function ModelViewer({model}) {
         // auto-rotate="true"
     >
         <button 
-            className="Hotspot story" 
-            slot="hotspot-1" 
-            data-name="story"
-            data-position="-15.17371364484508m 13.733440214997351m -0.38319811637248513m" 
-            data-normal="-0.02078116632344306m -0.1802298925512806m 0.9834049669170842m" 
+            class="Hotspot gameplay" 
+            slot="hotspot-3" 
+            data-name="gameplay"
+            data-target="0.00m -22.00m -93.00m" 
+            data-normal="0m 1m 0m" 
+            data-position="-0.13731682053599328m 0.8377597114419015m -5.373484045566966m" 
             data-visibility-attribute="visible"
-            data-target="-15m -7m -80m"
-            >
-            <div className="HotspotAnnotation">
-                <img src="./images/story.png" alt="" />
-            </div>
-        </button>
-
-        <button 
-            className="Hotspot gameplay" 
-            slot="hotspot-3"
-            data-name="gameplay" 
-            data-position="0.8963960088420251m 2.1090111828714697m -10.67504054997515m" 
-            data-normal="0m -1.343588610839583e-7m 0.9999999999999911m" 
-            data-visibility-attribute="visible"
-            data-target="0.00m -22.00m -100.00m"
-            >
-            <div className="HotspotAnnotation">
+        >
+            <div class="HotspotAnnotation">
                 <img src="./images/gameplay.png" alt="" />
             </div>
         </button>
 
         <button 
-            className="Hotspot roadmap" 
-            slot="hotspot-4" 
-            data-name="roadmap" 
-            data-position="10.691738579399255m 8.596935581875726m -19.161179077009717m" 
-            data-normal="0.084068692003698m -0.6899835441859172m 0.718926396634195m" 
+            class="Hotspot story" 
+            slot="hotspot-4"
+            data-name="story"
+            data-target="-15m -7m -80m" 
+            data-position="-14.9015823311893m 13.785732905606139m -0.3678642175748905m" 
+            data-normal="-0.020781167034444877m 0.9834049911180218m 0.1802297604194435m" 
             data-visibility-attribute="visible"
-            data-target="9m -11m -95m"
-            >
-            <div className="HotspotAnnotation">
-                <img src="./images/roadmap.png" alt="" />
+        >
+            <div class="HotspotAnnotation">
+                <img src="./images/story.png" alt="" />
             </div>
         </button>
-                            
+        
         <button 
-            className="Hotspot tokenomic" 
+            class="Hotspot about" 
             slot="hotspot-5" 
-            data-name="tokenomic" 
-            data-position="15.6116381187966m 6.402890192149521m 7.410681504706385m" 
-            data-normal="-0.06744800715356736m 0.9403464876600586m 0.3334655146734123m" 
+            data-name="about"
+            data-target="-12m -12m -75m" 
+            data-position="-11.210635639474113m 10.098773723700628m 8.677032433884243m" 
+            data-normal="0.37251586787697294m 0.6007353892742824m 0.7073534620353125m" 
             data-visibility-attribute="visible"
-            data-target="15m -18m -84m"
         >
-            <div className="HotspotAnnotation">
+            <div class="HotspotAnnotation">
+                <img src="./images/about.png" alt="" />
+            </div>
+        </button>
+        
+        <button 
+            class="Hotspot tokenomic" 
+            slot="hotspot-6"
+            data-name="tokenomic" 
+            data-target="15m -16m -80m" 
+            data-position="14.761169239419083m 5.843096931899201m 7.317932801548255m" 
+            data-normal="-0.1855656316405426m 0.954699863574524m 0.2326232293745228m" 
+            data-visibility-attribute="visible"
+        >
+            <div class="HotspotAnnotation">
                 <img src="./images/tokenomic.png" alt="" />
             </div>
         </button>
-
+        
         <button 
-            className="Hotspot about" 
-            slot="hotspot-6" 
-            data-name="about"
-            data-position="17.639094300976467m 6.981488777235602m -4.673789700264038m" 
-            data-normal="0.11157101174070311m 0.9887687838192699m 0.09943943626005725m" 
+            class="Hotspot roadmap" 
+            slot="hotspot-7"
+            data-name="roadmap"  
+            data-target="9m -11m -95m"
+            data-position="10.777018817840812m 8.95244601510392m -18.846553899529912m" 
+            data-normal="0.28569650671472246m 0.9475348150863014m 0.14337112767350713m" 
             data-visibility-attribute="visible"
-            data-target="16m -16m -93m"
         >
-            <div className="HotspotAnnotation">
-                <img src="./images/about.png" alt="" />
+            <div class="HotspotAnnotation">
+                <img src="./images/roadmap.png" alt="" />
             </div>
         </button>
 
