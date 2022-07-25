@@ -124,7 +124,7 @@ export default function Island() {
 
             <Social status={statusNavMobile}/>
 
-            <Menu setRotateStatusGlobal={setRotateStatusGlobal} rotateStatusGlobal={rotateStatusGlobal}/>
+            {/* <Menu setRotateStatusGlobal={setRotateStatusGlobal} rotateStatusGlobal={rotateStatusGlobal}/> */}
         </div>
     )
 }

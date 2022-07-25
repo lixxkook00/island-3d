@@ -13,7 +13,7 @@ export default function ModelViewer({model,rotateStatus}) {
         ref={model}
         id="hotspot-camera-view-demo"  
         bounds="tight" 
-        enable-pan src='./images/island7.gltf'
+        enable-pan src='./images/untitled_1.glb'
         ar ar-modes="webxr scene-viewer quick-look"
         camera-controls
         camera-target="0 0 0"
