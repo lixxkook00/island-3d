@@ -10,6 +10,7 @@ export default function ModelViewer({model,rotateStatus}) {
 
   return (
     <model-viewer 
+    
         ref={model}
         id="hotspot-camera-view-demo"  
         bounds="tight" 
