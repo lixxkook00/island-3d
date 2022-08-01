@@ -5,7 +5,7 @@ import ContentModal from '../../components/ContentModal'
 import NavMobile from '../../components/NavMobile'
 import Social from '../../components/Social'
 import ModelViewer from '../../components/ModelViewer'
-import Menu from '../Menu'
+// import Menu from '../Menu'
 
 export default function Island() {
     const [status,setStatus] = useState("")
@@ -40,6 +40,22 @@ export default function Island() {
                 modelViewer.querySelectorAll('button').forEach((hotspot) => {
                     hotspot.style.opacity = 1;
                 });
+
+                // init camera animation
+                const orbitCycle = [
+                    '-180deg -180deg 100%',
+                    modelViewer.cameraOrbit
+                ];
+
+                const animationCamera = setInterval(() => {
+                    const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
+                    modelViewer.cameraOrbit =
+                        orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
+
+                    if(currentOrbitIndex===0){
+                        clearInterval(animationCamera);
+                    }
+                }, 1000);
             } 
             else {
                 progressBar.classList.remove('hide');
@@ -58,22 +74,6 @@ export default function Island() {
 
         const modelViewer =  model.current;
 
-        // init camera animation
-        const orbitCycle = [
-            '-180deg -180deg 100%',
-            modelViewer.cameraOrbit
-        ];
-
-        const animationCamera = setInterval(() => {
-            const currentOrbitIndex = orbitCycle.indexOf(modelViewer.cameraOrbit);
-            modelViewer.cameraOrbit =
-                orbitCycle[(currentOrbitIndex + 1) % orbitCycle.length];
-
-            if(currentOrbitIndex===0){
-                clearInterval(animationCamera);
-            }
-        }, 1500);
-        
         // handle onclick
         const annotationClicked = (annotation) => {
             let dataset = annotation.dataset;
