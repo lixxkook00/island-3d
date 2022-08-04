@@ -60,3 +60,13 @@ a:not([href]):not([tabindex]){
   color: #fff;
 }
 
+.primary-gradient-text{
+  user-select: none;
+  font-weight: 900;
+  background-image: linear-gradient(90deg, #04420d 10%, #578b50 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin: 0 4px;
+}
+

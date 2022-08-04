@@ -60,9 +60,13 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: url("https://imgur.com/B2VVbTo.png");
+        // background: url("https://imgur.com/B2VVbTo.png");
+        background: url('../../../public/images/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: bottom center;
         background-size: cover;
-        animation: stars 40s linear infinite alternate;
+        // animation: stars 40s linear infinite alternate;
     }
     .block:before {
         position: absolute;
@@ -71,9 +75,13 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: url("https://imgur.com/OzQPJqM.png");
+        // background: url("https://imgur.com/OzQPJqM.png");
+        background: url('../../../public/images/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: bottom center;
         background-size: cover;
-        animation: stars 70s linear infinite alternate;
+        // animation: stars 70s linear infinite alternate;
     }
 
     @keyframes stars {
