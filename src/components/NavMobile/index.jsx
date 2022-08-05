@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function NavMobile({statusNavMobile,navMobile}) {
   return (
-    <div className={`nav-mobile ${statusNavMobile} hide-on-pc`} ref={navMobile}>
+    <div className={`nav-mobile ${statusNavMobile}`} ref={navMobile}>
         <div 
             className="nav-mobile-item story" 
             data-target="-15m -7m -80m"

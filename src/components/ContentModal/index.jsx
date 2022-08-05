@@ -5,7 +5,7 @@ const content = [
   {
     name:"tokenomic",
     title:"TOKENOMIC",
-    content:"Token:Soccer Realm Symbol : SOR Chain: BSC Total Supply: 1.000.000.000 SOR. SOR is a token deployed on the Binance Smart Chain. It is used in the ecosystem of the Soccer Realm. Giving voting rights to owners to decide the direction of development of the Soccer Realm ecosystem To join the NFT exchange market, log in to the game, and generate passive income through staking."
+    content:"Token:Soccer Realm Symbol : WFB Chain: BSC Total Supply: 1.000.000.000 WFB. WFB is a token deployed on the Binance Smart Chain. It is used in the ecosystem of the Soccer Realm. Giving voting rights to owners to decide the direction of development of the Soccer Realm ecosystem To join the NFT exchange market, log in to the game, and generate passive income through staking."
   },
 ]
 
@@ -169,7 +169,7 @@ export default function ContentModal({status,name}) {
             </div>
 
             <div className="tokenomic-img">
-              <img src="./images/token.png" alt="" />
+              <img src="./images/tokenomic-chart.png" alt="" />
             </div>
 
             <div className="content-modal-main content-modal-main--tokenomic">
@@ -187,7 +187,7 @@ export default function ContentModal({status,name}) {
                   Symbol
                 </div>
                 <span className="primary-gradient-text">
-                  : SOR
+                  : WFB
                 </span>
               </div>
 
@@ -201,7 +201,7 @@ export default function ContentModal({status,name}) {
               </div>
 
               <div className="content-modal-li">
-                SOR is a token deployed on the Binance Smart Chain. It is used to join the NFT exchange market, log in to the game, and generate passive income through staking.
+                WFB is a token deployed on the Binance Smart Chain. It is used to join the NFT exchange market, log in to the game, and generate passive income through staking.
               </div>
 
             </div>

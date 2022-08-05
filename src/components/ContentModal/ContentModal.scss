@@ -6,7 +6,7 @@
     padding: 5px 0px;
     border-radius: 10px;
     border: 3px solid #04420d;
-    max-width: 400px;
+    max-width: 500px;
     transition: all 0.5s ease-in-out;
     // background-image: url(../../../public/images/about-bg.png);
     // background-position: center center;
@@ -97,7 +97,7 @@
         margin: 20px 0;
 
         img{
-            width: 200px;
+            width: 450px;
             height: auto;
         }
     }
@@ -134,4 +134,7 @@
         overflow-y: auto;
     }
 
+    .content-modal .tokenomic-img img{
+        width: 290px;
+    }
 }

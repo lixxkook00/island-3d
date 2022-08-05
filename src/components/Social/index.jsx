@@ -22,7 +22,7 @@ export default function Social({status}) {
             </a>
 
             <a href="/" className="social-item">
-                <i className="fa-brands fa-discord"></i>
+                <i className="fa-solid fa-book-open"></i>
             </a>
         </div>
     </div>
