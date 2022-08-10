@@ -13,6 +13,12 @@ input{
   text-overflow: ellipsis;
 }
 
+.centering{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 ul{
     padding-left: 0;
     margin-bottom: 0;
@@ -63,7 +69,7 @@ a:not([href]):not([tabindex]){
 .primary-gradient-text{
   user-select: none;
   font-weight: 900;
-  background-image: linear-gradient(90deg, #04420d 10%, #578b50 90%);
+  background-image: linear-gradient(90deg, #016710 10%, #578b50 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;

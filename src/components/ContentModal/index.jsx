@@ -1,17 +1,7 @@
 import React , { useState } from 'react'
 import './ContentModal.scss'
 
-const content = [
-  {
-    name:"tokenomic",
-    title:"TOKENOMIC",
-    content:"Token:Soccer Realm Symbol : WFB Chain: BSC Total Supply: 1.000.000.000 WFB. WFB is a token deployed on the Binance Smart Chain. It is used in the ecosystem of the Soccer Realm. Giving voting rights to owners to decide the direction of development of the Soccer Realm ecosystem To join the NFT exchange market, log in to the game, and generate passive income through staking."
-  },
-]
-
 export default function ContentModal({status,name}) {
-
-  console.log(name)
   
   return (
     

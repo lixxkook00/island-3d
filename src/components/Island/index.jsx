@@ -5,6 +5,7 @@ import ContentModal from '../../components/ContentModal'
 import NavMobile from '../../components/NavMobile'
 import Social from '../../components/Social'
 import ModelViewer from '../../components/ModelViewer'
+import GamePlays from '../GamePlays'
 // import Menu from '../Menu'
 
 export default function Island() {
@@ -102,6 +103,8 @@ export default function Island() {
             modelViewer.cameraOrbit = "0 0 0";
             modelViewer.fieldOfView = '45deg';
 
+            setName("")
+
             setStatus("")
             setStatusNavMobile("active")
         }
@@ -123,6 +126,8 @@ export default function Island() {
             <NavMobile statusNavMobile={statusNavMobile} navMobile={navMobile}/>
 
             <Social status={statusNavMobile}/>
+
+            <GamePlays name={name}/>
 
             {/* <Menu setRotateStatusGlobal={setRotateStatusGlobal} rotateStatusGlobal={rotateStatusGlobal}/> */}
         </div>

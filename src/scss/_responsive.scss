@@ -53,6 +53,19 @@
 /* Mobile Only */
 @media (max-width: 739px) {
 
+    .gameplays{
+        overflow-x: auto;
+        justify-content: flex-start !important;
+
+        &-item{
+            width: 33% !important;
+        }
+
+        .primary-gradient-text{
+            font-size: 11px;
+            text-align: center;
+        }
+    }
    
 }
 

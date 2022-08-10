@@ -8,19 +8,11 @@
     border: 3px solid #04420d;
     max-width: 500px;
     transition: all 0.5s ease-in-out;
-    // background-image: url(../../../public/images/about-bg.png);
-    // background-position: center center;
-    // background-size: 100% 100%;
-    // padding: 80px 30px 40px;
 
     &-li{
         padding-left: 20px;
         margin-bottom: 4px;
         position: relative;
-
-        &-title{
-            // min-width: 60px;
-        }
 
         &::before{
             content: "";
