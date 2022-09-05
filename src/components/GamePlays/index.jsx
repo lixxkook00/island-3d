@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './GamePlays.scss'
 
 export default function GamePlays({name}) {
@@ -17,14 +18,14 @@ export default function GamePlays({name}) {
                     </div>
                 </div>
 
-                <div className="gameplays-item">
+                <Link to="/lucky-wheel" className="gameplays-item">
                     <div className="gameplays-item-img centering">
                         <img src="./images/gameplay-2.png" alt="" />
                     </div>
                     <div className="primary-gradient-text">
-                        Roulette
+                        Lucky Wheel
                     </div>
-                </div>
+                </Link>
 
                 <div className="gameplays-item">
                     <div className="gameplays-item-img centering">
