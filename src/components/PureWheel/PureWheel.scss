@@ -39,32 +39,32 @@
     padding: 8px;
 }
 
-span{
+#box span{
     width: 50%;
     height: 50%;
     display: inline-block;
     position: absolute;
 }
 
-.span1{
+#box .span1{
     clip-path: polygon(0 92%, 100% 50%, 0 8%);
     background-color: #A891F9;
     top: 120px;
     left: 0;
 }
-.span2{
+#box .span2{
     clip-path: polygon(100% 92%, 0 50%, 100% 8%);
     background-color: #07BAF3;
     top: 120px;
     right: 0;
 }
-.span3{
+#box .span3{
     clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
     background-color: #C55ACA;
     bottom: 0;
     left: 120px;
 }
-.span4{
+#box .span4{
     clip-path: polygon(50% 100%, 92% 0, 8% 0);
     background-color: #ca9908;
     top: 0;
@@ -77,7 +77,7 @@ span{
     height: 100%;
     transform: rotate(-135deg);
 }
-span b{
+#box span b{
     font-family: 'Roboto Condensed', sans-serif;
     width: 65px;
     height: 65px;

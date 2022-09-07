@@ -13,6 +13,11 @@ input{
   text-overflow: ellipsis;
 }
 
+.red-text{
+  color: #FF1F1F;
+  font-weight: 600;
+}
+
 .centering{
   display: flex;
   align-items: center;
@@ -76,3 +81,56 @@ a:not([href]):not([tabindex]){
   margin: 0 4px;
 }
 
+.primary-text{
+  color: #9FBE37;
+}
+
+.primary-button{
+  padding: 6px;
+  border-radius: 50px;
+  background-color: #9FBE37;
+
+  color: #fff !important;
+  font-weight: 600;
+  width: 100%;
+
+  font-size: 18px;
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
+
+.main-bg{
+  background: url(../../public/images/bg.png) center center no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+  width: 100vw;
+
+}
+
+.password-block{
+    display: flex;
+    position: relative;
+
+    &-icon{
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translateY(-50%);
+
+        i{
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        &:hover{
+            cursor: pointer;
+
+            i{
+                color: #0FBEDC;
+            }
+        }
+    }
+}

@@ -1,0 +1,76 @@
+.login{
+    background-color: rgba(0, 0, 0, 0.219);
+    padding: 30px 50px;
+    overflow: hidden;
+
+    color: #fff;
+
+    border-radius: 40px;
+    transition: all 0.4s ease-in-out;
+
+    // &.active{
+    //     transform: rotate(3420deg);
+
+    //     .form-title{
+    //         transform: rotate(-180deg);
+    //     }
+    // }
+
+    .form-title{
+        font-weight: 600;
+        font-size: 30px;
+        text-align: center;
+
+        margin-bottom: 20px;
+    }
+
+    input{
+        border-radius: 50px;
+        width: 400px;
+        color: rgba(221, 221, 221, 0.652);
+        padding-left: 15px;
+    }
+    
+    .forgot-pass{
+        font-size: 14px;
+        font-weight: 600;
+
+        &:hover{
+            cursor: pointer;
+            color: #9FBE37;
+        }
+    }
+
+    .wrapper-animation{
+        transition: all 0.2s ease-in-out;
+        height: 0;
+        transform: scaleY(0);
+    }
+
+    &.active .wrapper-animation{
+        height: auto;
+        transform: scaleY(1);
+    }
+
+    .button-animation-right{
+        transition: all 0.4s linear;
+        opacity: 0;
+        transform: translateX(200%);
+    }
+
+    &.active .button-animation-right{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    .button-animation-left{
+        transition: all 0.4s linear;
+        opacity: 0;
+        transform: translateX(-200%);
+    }
+
+    &.active .button-animation-left{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
