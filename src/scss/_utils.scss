@@ -77,7 +77,17 @@ a:not([href]):not([tabindex]){
 .primary-gradient-text{
   user-select: none;
   font-weight: 900;
-  background-image: linear-gradient(90deg, #016710 10%, #578b50 90%);
+  background-image: linear-gradient(90deg, #F7AB22 10%, #ffcc00c1 90%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  margin: 0 4px;
+}
+
+.gray-gradient-text{
+  user-select: none;
+  font-weight: 900;
+  background-image: linear-gradient(90deg, #fff 10%, #ddd 90%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-transform: uppercase;
@@ -124,10 +134,9 @@ a:not([href]):not([tabindex]){
 
 .main-bg{
   background: url(../../public/images/bg.png) center center no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   min-height: 100vh;
   width: 100vw;
-
 }
 
 .password-block{

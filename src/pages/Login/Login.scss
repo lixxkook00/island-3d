@@ -1,12 +1,15 @@
 .login{
     background-color: rgba(0, 0, 0, 0.219);
-    padding: 30px 50px;
+    padding: 20px;
     overflow: hidden;
 
     color: #fff;
 
     border-radius: 40px;
     transition: all 0.4s ease-in-out;
+
+    width: 100%;
+    max-width: 400px;
 
     // &.active{
     //     transform: rotate(3420deg);
@@ -26,7 +29,6 @@
 
     input{
         border-radius: 50px;
-        width: 400px;
         color: rgba(221, 221, 221, 0.652);
         padding-left: 15px;
     }

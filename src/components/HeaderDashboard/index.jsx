@@ -4,7 +4,7 @@ import './HeaderDashboard.scss'
 export default function HeaderDashboard() {
   return (
     <>
-        <div className="centering">
+        <div className="centering hidden-m-t">
             <div className="header-dashboard">
                 <div className="header-dashboard-side">
                     <div className="header-dashboard-item active">
@@ -30,7 +30,7 @@ export default function HeaderDashboard() {
         {/* Total wallet */}
         <div className="wallet container">
             <div className="row">
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-6">
                     <div className="wallet-item">
                         <div className="wallet-item-icon">
                             <img src="./images/2/bitcoin.png" alt="" />
@@ -41,7 +41,7 @@ export default function HeaderDashboard() {
                     </div>
                 </div>
 
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-6">
                     <div className="wallet-item">
                         <div className="wallet-item-icon">
                             <img src="./images/2/Binance.png" alt="" />
@@ -53,7 +53,7 @@ export default function HeaderDashboard() {
                 </div>
 
 
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-6">
                     <div className="wallet-item">
                         <div className="wallet-item-icon">
                             <img src="./images/2/b.png" alt="" />
@@ -64,7 +64,7 @@ export default function HeaderDashboard() {
                     </div>
                 </div>
 
-                <div className="col-lg-3">
+                <div className="col-lg-3 col-md-6">
                     <div className="wallet-item">
                         <div className="wallet-item-icon">
                             <img src="./images/2/dai.png" alt="" />

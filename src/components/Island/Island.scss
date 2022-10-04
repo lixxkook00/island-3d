@@ -183,11 +183,17 @@ model-viewer > #ar-prompt > img {
   position: absolute;
   left: 50%;
   bottom: 5%;
-  height: 40px;
   border-radius: 10px;
   transform: translate(-50%);
   transition: all 0.3s ease;
   outline: none;
+  background: url(../../../public/images/bg-buttton.png) no-repeat center center;
+  background-size: contain  ;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #fff;
+  padding: 10px 30px;
 
   &:hover{
     cursor: pointer;

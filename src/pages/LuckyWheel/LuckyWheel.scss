@@ -1,9 +1,86 @@
 .lucky-wheel{
-    background-color: #000000;
+    background: url(../../../public/images/2/background.png) no-repeat center center;
+    background-size: cover;
     display: flex;
     align-items: center;
     flex-direction: column;
     
     height: 100vh;
+    position: relative;
 
+    &-wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 0 5vw;
+    }
+
+    &-tower{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: auto;
+        width: 60vw;
+        height: 60vw;
+        background: url(../../../public/images/2/foot.png) no-repeat left bottom;
+        background-size: contain;
+    }
+
+    &-infor{
+        width: 30vw;
+        min-height: 300px;
+    }
+
+    .tower-wheel{
+        position: absolute;
+        left: 15.7vw;
+        bottom: 12.5vw;
+        width: 20vw;
+        height: 20vw;
+        object-fit: contain;
+    }
+
+    &-title{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 60%;
+        transform: translate(-50%, -50%);
+        padding: 2px 12px;
+        border-radius: 20px;
+        font-weight: 600;
+        background-color: #6D8DFF;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+
+    &-block{
+        position: relative;
+        padding: 25px 20px 15px;
+        border-radius: 10px;
+        margin-top: 40px;
+        background-color: #0C60FC;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+
+    .cost{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 4px 10px;
+        background-color: #1CC3FF;
+        border-radius: 4px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    }
+
+    .cost-coin{
+        width: 50px;
+        height: auto;
+    }
+
+    .cost-value{
+        font-weight: 600;
+        font-size: 14px;
+    }
 }

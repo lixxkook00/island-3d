@@ -9,14 +9,23 @@ export default function GamePlays({name}) {
             name === "gameplay"
             &&
             <div className="gameplays">
-                <div className="gameplays-item">
+                <Link to='/login' className="gameplays-item gameplays-item--disabled">
                     <div className="gameplays-item-img centering">
                         <img src="./images/gameplay-1.png" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Dice
                     </div>
-                </div>
+                </Link>
+
+                <Link to='/dashboard' className="gameplays-item">
+                    <div className="gameplays-item-img centering">
+                        <img src="./images/gameplay-3.png" alt="" />
+                    </div>
+                    <div className="primary-gradient-text">
+                        Click to Earn
+                    </div>
+                </Link>
 
                 <Link to="/lucky-wheel" className="gameplays-item">
                     <div className="gameplays-item-img centering">
@@ -27,40 +36,32 @@ export default function GamePlays({name}) {
                     </div>
                 </Link>
 
-                <div className="gameplays-item">
-                    <div className="gameplays-item-img centering">
-                        <img src="./images/gameplay-3.png" alt="" />
-                    </div>
-                    <div className="primary-gradient-text">
-                        Evoplay
-                    </div>
-                </div>
-
-                <div className="gameplays-item">
+                <Link to='/prediction' className="gameplays-item">
                     <div className="gameplays-item-img centering">
                         <img src="./images/gameplay-4.png" alt="" />
                     </div>
                     <div className="primary-gradient-text">
-                        Tower
+                        Prediction
                     </div>
-                </div>
-                <div className="gameplays-item">
+                </Link>
+
+                <Link to='/login' className="gameplays-item">
                     <div className="gameplays-item-img centering">
                         <img src="./images/gameplay-5.png" alt="" />
                     </div>
                     <div className="primary-gradient-text">
-                        Hilo
+                        Bet WC
                     </div>
-                </div>
+                </Link>
 
-                <div className="gameplays-item">
+                <Link to='/login' className="gameplays-item gameplays-item--disabled">
                     <div className="gameplays-item-img centering">
                         <img src="./images/gameplay-3.png" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Evoplay
                     </div>
-                </div>
+                </Link>
             </div>
         }
     </>

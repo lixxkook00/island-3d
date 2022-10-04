@@ -1,4 +1,5 @@
 import React from 'react'
+import './Dashboard.scss'
 
 import HeaderDashboard from '../../components/HeaderDashboard'
 import History from '../../components/History'
@@ -37,13 +38,13 @@ export default function Dashboard() {
           </div>
         </div>
 
-        <div className="container mt-4">
+        <div className="container mt-2">
           <div className="row">
              <div className="col-lg-6 h-100">
               <Reward />
             </div>
 
-            <div className="col-lg-6">
+            <div className="col-lg-6 mb-2">
               <History />
             </div>
 
