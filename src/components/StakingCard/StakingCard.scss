@@ -1,0 +1,155 @@
+.staking-card{
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: #27262D;
+
+    border: 1px solid #D6EFC7;
+    
+    min-height: 100%;
+
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 15px;
+
+        color: #FAD587;
+        font-weight: 700;
+
+        border-bottom: 1px solid #413C38;
+
+        &.next{
+            background-color: #FAD587;
+            color: #fff;
+        }
+
+        &.later{
+            background-color: #3E3E3E;
+            color: #fff;
+        }
+
+        &-status{
+            text-transform: uppercase;
+            i{
+                margin-right: 5px;
+            }
+        }
+
+        &-code{
+            font-weight: 500;
+        }
+    }
+
+    &-next-value{
+        font-size: 14px;
+    }
+
+    &-content{
+        padding: 20px;
+        min-height: 135px;
+        border-radius: 20px;
+        border: 1px solid #D6EFC7;
+        margin: 0 20px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-li{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            &-title{
+                margin-right: 4px;
+            }
+        }
+
+        &-price{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            margin-bottom: 10px;
+        }
+    }
+
+    &-down,
+    &-up{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        font-weight: 700;
+        
+        margin: 0 10%;
+        padding: 10px 0;
+
+        background: url(../../../public/images/rectangle-up.png) no-repeat top center;
+        background-size: 100% 100%;
+
+        h4{
+            font-weight: 700;
+        }
+
+        span{
+            font-size: 13px;
+        }
+
+        &:hover{
+            cursor: pointer;
+            opacity: 0.9;
+        }
+    }
+
+    &-up{
+        margin-top: 20px;
+
+        &.later{
+            background-image: url(../../../public/images/rectangle-up-later.png);
+        }
+    }
+
+    &-down{
+        background-image: url(../../../public/images/rectangle-down.png);
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+
+        &.later{
+            background-image: url(../../../public/images/rectangle-down-later.png);
+
+            h4{
+                color: #fff;
+            }
+        }
+
+        h4{
+            color: #ED8309;
+        }
+    }
+
+    .later-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &-title{
+            font-size: 12px;
+        }
+
+        &-countdown{
+            font-weight: 800;
+            font-size: 18px;
+        }
+    }
+
+    &-title{
+        font-size: 14px;
+        font-weight: 700;
+    }
+}

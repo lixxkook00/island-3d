@@ -48,6 +48,7 @@ export default function Login() {
                                 id="username" 
                                 className="form-control" 
                                 onFocus={() => setFormState("active")}
+                                autoComplete="off"
                             />
                         </div>
                     </div>
@@ -59,6 +60,7 @@ export default function Login() {
                                 // type={typePass}
                                 id="password" 
                                 className="form-control" 
+                                autoComplete="off"
                             />
                             <div className="password-block-icon" onClick={() => console.log()}>
                                 <i className="fa-solid fa-eye"></i>

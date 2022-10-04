@@ -6,7 +6,6 @@ input{
   outline:none;
   border:none;
 }
-
 .text-overflow{
   white-space: nowrap;
   overflow: hidden;
@@ -27,6 +26,10 @@ input{
 ul{
     padding-left: 0;
     margin-bottom: 0;
+}
+
+h4{
+  margin-bottom: 0;
 }
 
 li{
@@ -86,15 +89,32 @@ a:not([href]):not([tabindex]){
 }
 
 .primary-button{
-  padding: 6px;
-  border-radius: 50px;
-  background-color: #9FBE37;
+  padding: 4px 6px;
+  border-radius: 10px;
+  background-color: #A1E76F;
 
   color: #fff !important;
   font-weight: 600;
   width: 100%;
 
-  font-size: 18px;
+  text-align: center;
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}
+
+.second-button{
+  padding: 4px 6px;
+  border-radius: 10px;
+  background-color: #ED8308;
+
+  color: #fff !important;
+  font-weight: 600;
+  width: 100%;
+
+  text-align: center;
 
   &:hover{
     cursor: pointer;
@@ -133,4 +153,58 @@ a:not([href]):not([tabindex]){
             }
         }
     }
+}
+
+.price{
+  font-weight: 700;
+  color: #ffd000;
+}
+
+.value{
+  font-weight: 700;
+  color: #A1E76F;
+}
+
+.value-block{
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #A1E76F;
+
+  font-weight: 600;
+
+  i{
+    margin-right: 6px;
+    font-size: 14px;
+  }
+}
+
+.title{
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+}
+
+.primary-block{
+  background-color: #fff;
+  border-radius: 40px;
+  padding: 15px 30px;
+  border: 3px solid #40192C;
+}
+
+.primary-table{
+  width: 100%;
+
+  th,
+  td {
+    text-align: center;
+  }
+
+  tr{
+    padding: 8px 0;
+
+    &:hover{
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.101)
+    }
+  }
 }

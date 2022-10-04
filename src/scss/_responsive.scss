@@ -31,42 +31,52 @@
 }
 
 
-/* Tablet Only */
-
-@media (min-width: 740px) and (max-width: 1023px) {
-    .hidden-tl{
-        display: none !important;
-    }
-}
 
 /* Mobile & Tablet */
 @media (max-width: 1023px) {
-    .hidden-t {
-        display: none;
-    }
-
     .hidden-m-t {
         display: none !important;
     }
+
+}
+
+/* Tablet Only */
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    .App{
+        .hidden-t{
+            display: none !important;
+        }
+
+        .staking .card-list-wrapper {
+            width: 170vw;
+        }
+    }
+    
 }
 
 /* Mobile Only */
 @media (max-width: 739px) {
 
-    .gameplays{
-        overflow-x: auto;
-        justify-content: flex-start !important;
+    .App{
+        .gameplays{
+            overflow-x: auto;
+            justify-content: flex-start !important;
 
-        &-item{
-            width: 33% !important;
+            &-item{
+                width: 33% !important;
+            }
+
+            .primary-gradient-text{
+                font-size: 11px;
+                text-align: center;
+            }
         }
-
-        .primary-gradient-text{
-            font-size: 11px;
-            text-align: center;
+        
+        .staking .card-list-wrapper {
+            width: 240vw;
         }
     }
-   
 }
 
 /* 500*/

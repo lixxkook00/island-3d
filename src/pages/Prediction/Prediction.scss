@@ -1,0 +1,148 @@
+.staking{
+    min-height: 100vh;
+    width: 100vw;
+
+    background: #042B26 url('../../../public/images/staking-bg.png') no-repeat top center;
+    background-size: 100% 100%;
+
+    color: #fff;
+
+    position: relative;
+
+    .icon-coin{
+        transform: translateX(-20px);
+    }
+
+    &-button{
+        height: 30px;
+        width: 30px;
+
+        background: #96BB7C;
+        box-shadow: inset -2px -2px 2px rgba(0, 0, 0, 0.25), inset 2px 2px 2px rgba(255, 255, 255, 0.25);
+        border-radius: 8px;
+
+        transition: all 0.5s linear;
+
+        &:not(:last-child){
+            margin-right: 10px; 
+        }
+
+        &:hover{
+            cursor: pointer;
+            transform: scale(0.95);
+             background: #5d764c;
+        }
+    }
+
+    &-control{
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.359);
+        padding: 2px 2px;
+        border-radius: 20px;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 120px;
+
+        &-icon{
+            width: 30px;
+            // transform: translateX(-10px);
+
+            img{
+                width: 100%;
+                height: auto;
+                transform: scale(2)
+            }
+        }
+
+        &-side{
+            padding: 4px 9px;
+
+            &:hover{
+                cursor: pointer;
+                i{
+                    color: #7DBB51;
+                }
+            }
+        }
+    }
+
+    &-header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 30px 0 10px;
+    }
+
+    &-wallet-content{
+        padding: 4px 8px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        background-color: rgba(255, 255, 255, 0.256);
+    }
+
+    &-wallet-title{
+        font-weight: 700;
+        margin-right: 20px;
+    }
+
+    .card-list{
+        height: 100%;
+        margin-top: 30px;
+
+        &-wrapper{
+            width: 120vw;
+        }
+    }
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+}
+
+/* Tablet Only */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .staking-header {
+        padding: 30px 20px 10px;
+    }
+}
+
+
+/* Mobile Only */
+@media (max-width: 739px) {
+
+    .staking-header{
+        padding: 10px 20px 10px;
+    }
+
+    .staking-control{
+        position: absolute;
+        bottom: 6vh;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .staking-wallet-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .staking-wallet-title {
+        font-weight: 700;
+        margin-right: 10px;
+        font-size: 14px;
+    }
+
+    .staking-control-icon img{
+        transform: scale(1.4);
+    }
+
+    .card-list{
+        margin-top: 20px;
+    }
+}
