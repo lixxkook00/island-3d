@@ -9,6 +9,8 @@ export default function LuckyWheel() {
       <div className="lucky-wheel-wrapper">
         <div className="lucky-wheel-tower">
           <img className="tower-wheel" src="/images/2/wheel.png" alt="" />
+
+          
         </div>
 
         <div className="lucky-wheel-infor">
