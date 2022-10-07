@@ -20,7 +20,7 @@ export default function GamePlays({name}) {
 
                 <Link to='/dashboard' className="gameplays-item">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/gameplay-3.png" alt="" />
+                        <img src="./images/KICK.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Click to Earn
@@ -29,7 +29,7 @@ export default function GamePlays({name}) {
 
                 <Link to="/lucky-wheel" className="gameplays-item">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/gameplay-2.png" alt="" />
+                        <img src="./images/LUCKY WHEEL.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Lucky Wheel
@@ -38,7 +38,7 @@ export default function GamePlays({name}) {
 
                 <Link to='/prediction' className="gameplays-item">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/gameplay-4.png" alt="" />
+                        <img src="./images/predition.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Prediction
@@ -47,7 +47,7 @@ export default function GamePlays({name}) {
 
                 <Link to='/login' className="gameplays-item">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/gameplay-5.png" alt="" />
+                        <img src="./images/BETTING.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Bet WC
