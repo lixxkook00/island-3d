@@ -8,6 +8,64 @@
     height: 100vh;
     position: relative;
 
+    &-wallet{
+        padding: 0 12px 0 8px;
+        border: 2px solid #000961;
+        display: flex;
+        align-items: center;
+        background-color: #DBE3FF;
+        border-radius: 20px;
+
+        &-amount{
+            font-weight: 600;
+        }
+
+        &-icon{
+            width: 26px;
+            height: auto;
+            transform: scale(1.7) translateX(-30%);
+        }
+    }
+
+    &-header{
+        position: absolute;
+        top: 40px;
+        left: 0;
+        z-index: 10;
+        padding: 0 20px;
+        width: 100vw;
+
+        display: flex;
+        align-content: center;
+        justify-content: space-between;
+    }
+
+    &-button{
+        height: 40px;
+        width: 40px;
+        border-radius:  50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #FFD36F;
+        border: 2px solid #040E70;
+        transition: all 0.3s ease-in-out;
+        box-shadow: inset -4px -4px 2px #C59A3A, inset 4px 4px 1px rgba(255, 255, 255, 0.8);
+
+        &:hover{
+            cursor: pointer;
+            box-shadow: inset -4px -4px 2px rgba(255, 255, 255, 0.8), inset 4px 4px 1px #C59A3A;
+        }
+
+        &:not(:last-child){
+            margin-right: 10px; 
+        }
+
+        i{
+            color: #fff;
+        }
+    }
+
     &-wrapper{
         display: flex;
         align-items: center;
@@ -47,11 +105,11 @@
         left: 50%;
         width: 60%;
         transform: translate(-50%, -50%);
-        padding: 2px 12px;
+        padding: 4px 12px;
         border-radius: 20px;
-        font-weight: 600;
         background-color: #6D8DFF;
-        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        border: 2px solid #000961;
+        box-shadow: 0px 4px 4px #040E70, inset -4px -4px 4px #4C5D9A, inset 2px 2px 4px rgba(255, 255, 255, 0.8);
     }
 
     &-block{
@@ -60,7 +118,8 @@
         border-radius: 10px;
         margin-top: 40px;
         background-color: #0C60FC;
-        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        border: 1px solid #000961;
+        box-shadow: 0px 4px 4px #000961, inset 0px 4px 4px rgba(255, 255, 255, 0.5);
     }
 
     .cost{
@@ -123,41 +182,6 @@
 
                 &--8{
                     animation-delay: 0.35s;
-                }
-            }
-        }
-
-        &.active-result{
-
-            .wheel-prize-item{
-                animation: active-wheel-prize 1s linear infinite alternate-reverse;
-
-                &--2{
-                    animation-delay: 0.1s;
-                }
-
-                &--3{
-                    animation-delay: 0.2s;
-                }
-
-                &--4{
-                    animation-delay: 0.3s;
-                }
-
-                &--5{
-                    animation-delay: 0.4s;
-                }
-
-                &--6{
-                    animation-delay: 0.5s;
-                }
-
-                &--7{
-                    animation-delay: 0.6s;
-                }
-
-                &--8{
-                    animation-delay: 0.7s;
                 }
             }
         }
@@ -226,7 +250,7 @@
         }
 
         &-icon{
-            width: 50px;
+            width: 50%;
             height: auto;
         }
     }
@@ -245,5 +269,67 @@
             cursor: pointer;
             transform: translate(-50%,-50%) scale(0.935);
         }
+    }
+}
+
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    .lucky-wheel{
+        min-height: 100vh;
+        height: auto;
+        padding-top: 17vh;
+    }
+
+    .lucky-wheel-wrapper{
+        flex-wrap: wrap;
+    }
+
+    .lucky-wheel-infor{
+        width: 100%;
+    }
+
+    .lucky-wheel-tower{
+        position: relative;
+        width: 100%;
+        background: url(../../../public/images/wheel-clear.png) no-repeat bottom center;
+        background-size: 70%;
+        padding-top: 88.9vw;
+    }
+    
+    .lucky-wheel .cost-coin {
+        width: 30px;
+    }
+
+    .lucky-wheel .cost{
+        padding: 6px;
+    }
+
+    .lucky-wheel .tower-wheel {
+        position: absolute;
+        left: 17vw;
+        bottom: 25vw;
+        width: 56vw;
+        height: 56vw;
+        object-fit: contain;
+    }
+
+    .lucky-wheel .wheel-prize {
+        height: 85vw;
+        width: 84vw;
+        top: -6.2vw;
+        left: 3vw;
+    }
+
+    .lucky-wheel .wheel-prize-item {
+       width: 19vw;
+        height: 19vw;
+    }
+
+    .lucky-wheel .wheel-prize-icon {
+        width: 50%;
+    }
+
+    .lucky-wheel-header{
+        top: 10px;
     }
 }

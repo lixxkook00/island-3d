@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import './LuckyWheel.scss'
 
 export default function LuckyWheel() {
@@ -25,7 +26,32 @@ export default function LuckyWheel() {
 
   return (
     <div className="lucky-wheel centering">
+      {/* wheel header */}
+      <div className="lucky-wheel-header">
+        <div className="d-flex align-items-center">
+          <Link to='/' className="lucky-wheel-button">
+            <i class="fa-solid fa-house"></i>
+          </Link>
+
+          <div className="lucky-wheel-button">
+            <i class="fa-solid fa-question"></i>
+          </div>
+
+          <div className="lucky-wheel-button">
+            <i class="fa-sharp fa-solid fa-clock-rotate-left"></i>
+          </div>
+        </div>
+
+        <div className="lucky-wheel-wallet">
+          <img src="./images/coin-wheel.png" alt="" className="lucky-wheel-wallet-icon" />
+          <div className="lucky-wheel-wallet-amount">
+            123.123K
+          </div>
+        </div>
+      </div>
+
       <div className="lucky-wheel-wrapper">
+        {/* wheel */}
         <div className="lucky-wheel-tower">
           <img className="tower-wheel" src="/images/2/wheel.png" alt="" />
 
@@ -67,6 +93,7 @@ export default function LuckyWheel() {
 
         </div>
 
+        {/* infor table */}
         <div className="lucky-wheel-infor">
           <div className="lucky-wheel-block">
             <div className="lucky-wheel-title text-center">
