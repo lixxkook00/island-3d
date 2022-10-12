@@ -1,6 +1,8 @@
 import React from 'react'
 
 import { Route, Routes } from 'react-router-dom'
+import Betting from '../pages/Betting'
+import BettingRoom from '../pages/BettingRoom'
 
 import Dashboard from '../pages/Dashboard'
 import Login from '../pages/Login'
@@ -21,6 +23,10 @@ export default function Routers() {
         <Route exact path="/prediction" element={<Prediction />} />
 
         <Route exact path="/dashboard" element={<Dashboard />} />
+
+        <Route exact path="/betting" element={<Betting />} />
+
+        <Route exact path="/betting/room" element={<BettingRoom />} />
 
     </Routes>
   )

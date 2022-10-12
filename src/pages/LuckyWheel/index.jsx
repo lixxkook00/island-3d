@@ -30,20 +30,20 @@ export default function LuckyWheel() {
       <div className="lucky-wheel-header">
         <div className="d-flex align-items-center">
           <Link to='/' className="lucky-wheel-button">
-            <i class="fa-solid fa-house"></i>
+            <i className="fa-solid fa-house"></i>
           </Link>
 
           <div className="lucky-wheel-button">
-            <i class="fa-solid fa-question"></i>
+            <i className="fa-solid fa-question"></i>
           </div>
 
           <div className="lucky-wheel-button">
-            <i class="fa-sharp fa-solid fa-clock-rotate-left"></i>
+            <i className="fa-sharp fa-solid fa-clock-rotate-left"></i>
           </div>
         </div>
 
         <div className="lucky-wheel-wallet">
-          <img src="./images/coin-wheel.png" alt="" className="lucky-wheel-wallet-icon" />
+          <img src="/images/coin-wheel.png" alt="" className="lucky-wheel-wallet-icon" />
           <div className="lucky-wheel-wallet-amount">
             123.123K
           </div>
@@ -57,38 +57,38 @@ export default function LuckyWheel() {
 
           <div className={`wheel-prize ${rotateState}`}>
             <div className={`wheel-prize-item wheel-prize-item--1 ${ resultNumber === 1 && 'active'}`}>
-              <img src="./images/2/usd.png" alt="" className="wheel-prize-icon" />
+              <img src="/images/2/usd.png" alt="" className="wheel-prize-icon" />
             </div>
 
             <div className={`wheel-prize-item wheel-prize-item--2 ${ resultNumber === 2 && 'active'}`}>
-              <img src="./images/2/b.png" alt="" className="wheel-prize-icon" />
+              <img src="/images/2/b.png" alt="" className="wheel-prize-icon" />
             </div>
             
             <div className={`wheel-prize-item wheel-prize-item--3 ${ resultNumber === 3 && 'active'}`}>
-              <img src="./images/2/Binance.png" alt="" className="wheel-prize-icon" />
+              <img src="/images/2/Binance.png" alt="" className="wheel-prize-icon" />
             </div>
             
             <div className={`wheel-prize-item wheel-prize-item--4 ${ resultNumber === 4 && 'active'}`}>
-              <img src="./images/2/bitcoin.png" alt="" className="wheel-prize-icon" />
+              <img src="/images/2/bitcoin.png" alt="" className="wheel-prize-icon" />
             </div>
 
             <div className={`wheel-prize-item wheel-prize-item--5 ${ resultNumber === 5 && 'active'}`}>
-              <img src="./images/2/usd.png" alt="" className="wheel-prize-icon" />
+              <img src="/images/2/usd.png" alt="" className="wheel-prize-icon" />
             </div>
 
             <div className={`wheel-prize-item wheel-prize-item--6 ${ resultNumber === 6 && 'active'}`}>
-              <img src="./images/2/T.png" alt="" className="wheel-prize-icon" />
+              <img src="/images/2/T.png" alt="" className="wheel-prize-icon" />
             </div>
 
             <div className={`wheel-prize-item wheel-prize-item--7 ${ resultNumber === 7 && 'active'}`}>
-              <img src="./images/2/Binance.png" alt="" className="wheel-prize-icon" />
+              <img src="/images/2/Binance.png" alt="" className="wheel-prize-icon" />
             </div>
 
             <div className={`wheel-prize-item wheel-prize-item--8 ${ resultNumber === 8 && 'active'}`}>
-              <img src="./images/2/bitcoin.png" alt="" className="wheel-prize-icon" />
+              <img src="/images/2/bitcoin.png" alt="" className="wheel-prize-icon" />
             </div>
             
-            <img onClick={handleSpinning} className="wheel-button" src="./images/chongdien.jpeg" alt="" />
+            <img onClick={handleSpinning} className="wheel-button" src="/images/chongdien.jpeg" alt="" />
           </div>
 
         </div>

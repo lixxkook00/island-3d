@@ -1,0 +1,31 @@
+.betting-detail{
+    
+    
+
+    &-banner{
+        padding: 60px 120px 10px;
+        margin: 20px 0 0;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background: url(../../../public/images/betting/background.png) no-repeat center center;
+        background-size: cover;
+    }
+
+    &-time{
+        margin-top: 20px;
+        font-size: 22px;
+    }
+
+    &-countdown{
+        background-color: #00053B;
+        margin-bottom: 20px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+}
+
+.betting-button{
+    padding: 4px 12px;
+    background-color: #00F239;
+    border-radius:  20px;
+}

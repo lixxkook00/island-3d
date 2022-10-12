@@ -159,7 +159,7 @@ export default function ContentModal({status,name}) {
             </div>
 
             <div className="tokenomic-img">
-              <img src="./images/tokenomic-chart.png" alt="" />
+              <img src="/images/tokenomic-chart.png" alt="" />
             </div>
 
             <div className="content-modal-main content-modal-main--tokenomic">

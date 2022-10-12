@@ -33,7 +33,7 @@ export default function HeaderDashboard() {
                 <div className="col-lg-3 col-md-6">
                     <div className="wallet-item">
                         <div className="wallet-item-icon">
-                            <img src="./images/2/bitcoin.png" alt="" />
+                            <img src="/images/2/bitcoin.png" alt="" />
                         </div>
                         <div className="wallet-item-value">
                             0.00000
@@ -44,7 +44,7 @@ export default function HeaderDashboard() {
                 <div className="col-lg-3 col-md-6">
                     <div className="wallet-item">
                         <div className="wallet-item-icon">
-                            <img src="./images/2/Binance.png" alt="" />
+                            <img src="/images/2/Binance.png" alt="" />
                         </div>
                         <div className="wallet-item-value">
                             0.00000
@@ -56,7 +56,7 @@ export default function HeaderDashboard() {
                 <div className="col-lg-3 col-md-6">
                     <div className="wallet-item">
                         <div className="wallet-item-icon">
-                            <img src="./images/2/b.png" alt="" />
+                            <img src="/images/2/b.png" alt="" />
                         </div>
                         <div className="wallet-item-value">
                             0.00000
@@ -67,7 +67,7 @@ export default function HeaderDashboard() {
                 <div className="col-lg-3 col-md-6">
                     <div className="wallet-item">
                         <div className="wallet-item-icon">
-                            <img src="./images/2/dai.png" alt="" />
+                            <img src="/images/2/dai.png" alt="" />
                         </div>
                         <div className="wallet-item-value">
                             0.00000

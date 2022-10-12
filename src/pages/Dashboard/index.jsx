@@ -21,19 +21,19 @@ export default function Dashboard() {
             </div>
 
             <div className="nft-item">
-              <img src="./images/1/nft-1.png" alt="" />
+              <img src="/images/1/nft-1.png" alt="" />
             </div>
 
             <div className="nft-item">
-              <img src="./images/1/nft-2.png" alt="" />
+              <img src="/images/1/nft-2.png" alt="" />
             </div>
 
             <div className="nft-item">
-              <img src="./images/1/nft-5.png" alt="" />
+              <img src="/images/1/nft-5.png" alt="" />
             </div>
 
             <div className="nft-item">
-              <img src="./images/1/nft-4.png" alt="" />
+              <img src="/images/1/nft-4.png" alt="" />
             </div>
           </div>
         </div>

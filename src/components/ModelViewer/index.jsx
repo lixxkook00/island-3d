@@ -14,7 +14,7 @@ export default function ModelViewer({model,rotateStatus}) {
         ref={model}
         id="hotspot-camera-view-demo"  
         bounds="tight" 
-        enable-pan src='./images/NEW_2.gltf'
+        enable-pan src='/images/NEW_2.gltf'
         ar ar-modes="webxr scene-viewer quick-look"
         camera-controls
         camera-target="0 0 0"
@@ -40,7 +40,7 @@ export default function ModelViewer({model,rotateStatus}) {
             data-visibility-attribute="visible"
         >
             <div className="HotspotAnnotation">
-                <img src="./images/gameplay.png" alt="" />
+                <img src="/images/gameplay.png" alt="" />
             </div>
         </button>
 
@@ -54,7 +54,7 @@ export default function ModelViewer({model,rotateStatus}) {
             data-visibility-attribute="visible"
         >
             <div className="HotspotAnnotation">
-                <img src="./images/story.png" alt="" />
+                <img src="/images/story.png" alt="" />
             </div>
         </button>
         
@@ -68,7 +68,7 @@ export default function ModelViewer({model,rotateStatus}) {
             data-visibility-attribute="visible"
         >
             <div className="HotspotAnnotation">
-                <img src="./images/about.png" alt="" />
+                <img src="/images/about.png" alt="" />
             </div>
         </button>
         
@@ -82,7 +82,7 @@ export default function ModelViewer({model,rotateStatus}) {
             data-visibility-attribute="visible"
         >
             <div className="HotspotAnnotation">
-                <img src="./images/tokenomic.png" alt="" />
+                <img src="/images/tokenomic.png" alt="" />
             </div>
         </button>
         
@@ -96,7 +96,7 @@ export default function ModelViewer({model,rotateStatus}) {
             data-visibility-attribute="visible"
         >
             <div className="HotspotAnnotation">
-                <img src="./images/roadmap.png" alt="" />
+                <img src="/images/roadmap.png" alt="" />
             </div>
         </button>
 

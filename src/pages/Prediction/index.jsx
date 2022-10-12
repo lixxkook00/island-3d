@@ -27,7 +27,7 @@ export default function Prediction() {
                     <div className="staking-wallet d-flex">
                         <div className="staking-wallet-content d-flex">
                             <div className="staking-control-icon icon-coin">
-                                <img src="./images/coin.png" alt="" />
+                                <img src="/images/coin.png" alt="" />
                             </div>
                             <div className="staking-wallet-title">
                                 TOKEN
@@ -43,7 +43,7 @@ export default function Prediction() {
                             <i className="fa-solid fa-chevron-left"></i>
                         </div>
                         <div className="staking-control-icon">
-                            <img src="./images/staking-center.png" alt="" />
+                            <img src="/images/staking-center.png" alt="" />
                         </div>
                         <div className="staking-control-side" ref={navigationNextRef}>
                             <i className="fa-solid fa-chevron-right"></i>

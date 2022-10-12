@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+.countdown{
+
+    &-item{
+        padding: 4px 12px;
+    }
+
+    &-item-num{
+        color: #00F239;
+        font-size: 24px;
+        font-family: 'Orbitron', sans-serif;
+    }
+
+    &-item-text{
+        font-size : 10px;
+    }
+}

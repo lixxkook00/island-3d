@@ -11,7 +11,7 @@ export default function GamePlays({name}) {
             <div className="gameplays">
                 <Link to='/login' className="gameplays-item gameplays-item--disabled">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/gameplay-1.png" alt="" />
+                        <img src="/images/gameplay-1.png" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Dice
@@ -20,7 +20,7 @@ export default function GamePlays({name}) {
 
                 <Link to='/dashboard' className="gameplays-item">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/KICK.jpg" alt="" />
+                        <img src="/images/KICK.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Click to Earn
@@ -29,7 +29,7 @@ export default function GamePlays({name}) {
 
                 <Link to="/lucky-wheel" className="gameplays-item">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/LUCKY WHEEL.jpg" alt="" />
+                        <img src="/images/LUCKY WHEEL.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Lucky Wheel
@@ -38,16 +38,16 @@ export default function GamePlays({name}) {
 
                 <Link to='/prediction' className="gameplays-item">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/predition.jpg" alt="" />
+                        <img src="/images/predition.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Prediction
                     </div>
                 </Link>
 
-                <Link to='/login' className="gameplays-item">
+                <Link to='/betting' className="gameplays-item">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/BETTING.jpg" alt="" />
+                        <img src="/images/BETTING.jpg" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Bet WC
@@ -56,7 +56,7 @@ export default function GamePlays({name}) {
 
                 <Link to='/login' className="gameplays-item gameplays-item--disabled">
                     <div className="gameplays-item-img centering">
-                        <img src="./images/gameplay-3.png" alt="" />
+                        <img src="/images/gameplay-3.png" alt="" />
                     </div>
                     <div className="primary-gradient-text">
                         Evoplay

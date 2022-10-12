@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@600&display=swap');
+
+.pool-card{
+    
+    &-result{
+        padding: 0 20px;
+    }
+
+    &-num{
+        font-family: 'Exo', sans-serif;
+        font-size: 45px;
+        font-weight: 700;
+    }
+}

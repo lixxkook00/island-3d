@@ -9,7 +9,7 @@ export default function NavMobile({statusNavMobile,navMobile}) {
             data-name="story"
         >
             <div className="nav-mobile-item-icon">
-                <img src="./images/story-ball.png" alt="" />
+                <img src="/images/story-ball.png" alt="" />
             </div>
             <div className="nav-mobile-item-title">
                 Story
@@ -22,7 +22,7 @@ export default function NavMobile({statusNavMobile,navMobile}) {
             data-name="gameplay"
         >
             <div className="nav-mobile-item-icon">
-                <img src="./images/gameplay-ball.png" alt="" />
+                <img src="/images/gameplay-ball.png" alt="" />
             </div>
             <div className="nav-mobile-item-title">
                 Game Play
@@ -35,7 +35,7 @@ export default function NavMobile({statusNavMobile,navMobile}) {
             data-name="roadmap"
         >
             <div className="nav-mobile-item-icon">
-                <img src="./images/roadmap-ball.png" alt="" />
+                <img src="/images/roadmap-ball.png" alt="" />
             </div>
             <div className="nav-mobile-item-title">
                 Road Map
@@ -48,7 +48,7 @@ export default function NavMobile({statusNavMobile,navMobile}) {
             data-name="about"    
             >
             <div className="nav-mobile-item-icon">
-                <img src="./images/about-ball.png" alt="" />
+                <img src="/images/about-ball.png" alt="" />
             </div>
             <div className="nav-mobile-item-title">
                 About
@@ -61,7 +61,7 @@ export default function NavMobile({statusNavMobile,navMobile}) {
             data-name="tokenomic"
         >
             <div className="nav-mobile-item-icon">
-                <img src="./images/tokenomic-ball.png" alt="" />
+                <img src="/images/tokenomic-ball.png" alt="" />
             </div>
             <div className="nav-mobile-item-title">
                 Tokenomic

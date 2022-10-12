@@ -217,3 +217,34 @@ a:not([href]):not([tabindex]){
     }
   }
 }
+
+.avt{
+  height: 40px;
+  width: 40px;
+
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.grid-4-1, .grid-4-2 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.grid{
+  display: grid;
+  gap: 10px;
+}
+
+.grid-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}

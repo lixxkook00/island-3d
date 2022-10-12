@@ -37,7 +37,19 @@
     .hidden-m-t {
         display: none !important;
     }
+    .grid-4-1{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 
+    .grid-m-1{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+
+    .App{
+        .betting-detail-banner{
+            padding: 10px;
+        }
+    }
 }
 
 /* Tablet Only */

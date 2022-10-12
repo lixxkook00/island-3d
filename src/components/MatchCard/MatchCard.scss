@@ -1,0 +1,113 @@
+.match-card{
+    width: 100%;
+    background-color:#00F239;
+    padding: 2px 2px 6px 2px;
+    border-radius: 20px;
+
+    margin-top: 10px;
+
+    &-content{
+        padding: 8% 12%;
+        padding-bottom: 10px;
+        background-color: #2D2D2D;
+        border-radius: 20px;
+
+        position: relative;
+    }
+
+    &-name{
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    &-flag{
+        border: 2px solid #D9D9D9;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    &-viewmore{
+        margin-top: 6px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #000961;
+    }
+
+    &-text{
+        text-align: center;
+        color: #6C6C6C;
+        font-size: 12px;
+        font-weight: 600;
+        margin-bottom: 4px;
+    }
+    
+    &-bottom{
+        margin-top: 15px;
+    }
+
+    &-num{
+        padding: 5px 25px;
+        background-color: #1E1E1E;
+        color: #00F239;
+        border-radius: 10px;
+    }
+
+    &-like{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        
+        flex-direction:  column;
+        padding: 2px;
+        
+        top: 10%;
+        width: 10%;
+
+        &-icon{
+            width: 12px;
+        }
+
+        &-percent{
+            font-size: 10px;
+            color: #2D2D2D;
+        }
+
+        &--left{
+            background-color: #FFDD00;
+            left: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            align-items: start;
+            padding-left: 4px;
+        }
+
+        &--right{
+            background-color: #8D1B3D;
+            right: 0;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            align-items: end;
+            padding-right: 4px;
+        }
+    }
+
+    &-date{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #1E1E1E;
+        padding: 6px 12px;
+
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        &-icon{
+            width: 15px;
+        }
+
+        &-text{
+            font-size: 12px;
+        }
+    }
+}
