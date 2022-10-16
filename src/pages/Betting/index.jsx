@@ -25,6 +25,10 @@ export default function Betting() {
                 <MatchCard />
                 <MatchCard />
                 <MatchCard />
+                <MatchCard />
+                <MatchCard />
+                <MatchCard />
+                <MatchCard />
             </div>
         </div>
     </div>

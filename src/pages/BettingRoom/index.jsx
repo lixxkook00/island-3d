@@ -1,13 +1,17 @@
 import React from 'react'
 import BettingHeader from '../../components/BettingHeader'
 import Countdown from '../../components/Countdown'
+import LiveCard from '../../components/LiveCard'
 import PoolCard from '../../components/PoolCard'
+import CreatePool from '../../modals/CreatePool'
 import './BettingRoom.scss'
 
 export default function BettingRoom() {
   return (
     <div className="betting">
         <BettingHeader />
+
+        <CreatePool />
 
         <div className="container">
             <div className="row">
@@ -59,6 +63,39 @@ export default function BettingRoom() {
                         <PoolCard />
                         <PoolCard />
                         <PoolCard />
+                    </div>
+                </div>
+                <div className="col-lg-3">
+                    <div className="live-card-list">
+                        <div className="live-card-list-header d-flex align-items-center justify-content-between">
+                            <div className="live-card-list-title">
+                                Live <i className="fa-solid fa-circle-play"></i>
+                            </div>
+                            <div className="live-card-list-viewmore">
+                                Mostly <i className="fa-solid fa-caret-down ml-1"></i>
+                            </div>
+                        </div>
+
+                        <LiveCard />
+                        <LiveCard />
+                        <LiveCard />
+                        <LiveCard />
+                    </div>
+
+                    <div className="live-card-list">
+                        <div className="live-card-list-header d-flex align-items-center justify-content-between">
+                            <div className="live-card-list-title">
+                                History <i className="fa-solid fa-clock-rotate-left"></i>
+                            </div>
+                            <div className="live-card-list-viewmore">
+                                Mostly <i className="fa-solid fa-caret-down ml-1"></i>
+                            </div>
+                        </div>
+
+                        <LiveCard />
+                        <LiveCard />
+                        <LiveCard />
+                        <LiveCard />
                     </div>
                 </div>
             </div>

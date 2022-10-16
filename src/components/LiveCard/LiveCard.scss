@@ -1,0 +1,42 @@
+.live-card-list{
+    padding: 20px 0;
+    border-radius: 20px;
+    background-color: #00053C;
+    
+    margin-top: 20px;
+
+    &-header{
+        padding: 0 20px;
+    }
+    
+    &-title{
+        font-weight: 600;
+        font-size: 20px;
+
+        i{
+            color: #00f23889;
+        }
+    }
+
+    &-viewmore{
+        font-size: 14px;
+        font-weight: 300;
+    }
+
+    .livecard:nth-child(2n){
+        background-color: #00074C;
+    }
+}
+
+.livecard{
+    padding: 15px 10px;
+    
+    .match-card-team{
+        padding: 0 30px;
+    }
+
+    .match-card-flag{
+        width: 60px;
+        height : auto;
+    }
+}
