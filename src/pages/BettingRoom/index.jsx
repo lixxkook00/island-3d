@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import BettingHeader from '../../components/BettingHeader'
 import Countdown from '../../components/Countdown'
 import LiveCard from '../../components/LiveCard'
@@ -7,11 +7,14 @@ import CreatePool from '../../modals/CreatePool'
 import './BettingRoom.scss'
 
 export default function BettingRoom() {
+
+    const [show, setShow] = useState(false);
+
   return (
     <div className="betting">
         <BettingHeader />
 
-        <CreatePool />
+        <CreatePool show={show} setShow={setShow}/>
 
         <div className="container">
             <div className="row">
@@ -48,7 +51,7 @@ export default function BettingRoom() {
                     </div>
 
                     <div className="centering">
-                        <div className="betting-button">
+                        <div className="betting-button" onClick={() => setShow(true)}>
                             Create Pool
                         </div>
                     </div>

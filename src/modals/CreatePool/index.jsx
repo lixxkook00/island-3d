@@ -1,24 +1,22 @@
 import React, { useState } from 'react'
+import './CreatePool.scss'
 
-import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
-export default function CreatePool() {
-
-    const [show, setShow] = useState(true);
+export default function CreatePool({show, setShow}) {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
     return (
-        <Modal show={show} onHide={handleClose} animation={false}>
+        <Modal show={show} onHide={handleClose} animation={false} centered>
             <div className="create-pool">
                 <div className="create-pool-header">
                     CREATE POOL
                 </div>
 
                 <div className="centering">
-                    <div className="create-pool-title">
+                    <div className="create-pool-title text-center">
                         MATCH
                     </div>
                 </div>
@@ -32,7 +30,7 @@ export default function CreatePool() {
                 </div>
 
                 <div className="centering">
-                    <div className="create-pool-title">
+                    <div className="create-pool-title text-center">
                         RATIO
                     </div>
                 </div>
@@ -66,6 +64,45 @@ export default function CreatePool() {
                     </div>
                 </div>
 
+                <div className="grid grid-2 grid-m-1">
+                    <div className="create-pool-block d-flex align-items-center">
+                        <div className="create-pool-title">
+                            MIN POOL
+                        </div>
+
+                        <input type="text" />
+                    </div>
+
+                    <div className="create-pool-block d-flex align-items-center">
+                        <div className="create-pool-title">
+                        MAX POOL 
+                        </div>
+
+                        <input type="text" />
+                    </div>
+                </div>
+
+                <div className="create-pool-block d-flex align-items-center">
+                    <div className="create-pool-title">
+                       SIZE POOL
+                    </div>
+
+                    <input type="text" />
+                </div>
+
+                <div className="create-pool-block d-flex align-items-center">
+                    <div className="create-pool-title">
+                       PASS POOL
+                    </div>
+
+                    <input type="text" />
+                </div>
+
+                <div className="centering mt-4">
+                    <div className="betting-button">
+                        Create
+                    </div>
+                </div>
             </div>
         </Modal>
     )
